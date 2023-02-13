@@ -10,6 +10,8 @@ description: Landing page for our documentation
 
 Hey there, and welcome to the BlueBubbles documentation! This will provide links to the main documentation, as well as quick links to popular BlueBubbles guides.
 
+Make sure to check out our Discord linked in the header for any questions not covered by these docs.
+
 ### Server Documentation
 
 {% embed url="https://docs.bluebubbles.app/server" %}
