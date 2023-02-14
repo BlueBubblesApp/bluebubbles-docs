@@ -20,16 +20,16 @@ Actually this (`Docker-OSX`) is a QEMU VM running under an Arch Docker. However 
 
 `TigerVNC-Viewer` or equivalent VNC Viewer/Client (Optional) `screen` for interacting with docker `-ai`
 
-## Initiate base image:
+## Initiate base image
 
-```
+```bash
 #!/bin/bash
 docker run -it \
     --name macos_base \
     --device /dev/kvm \
     -p 50922:10022 \
     -p 5999:5999 \
-    -e NOPICKER=true \    
+    -e NOPICKER=true \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e "DISPLAY=${DISPLAY:-:0.0}" \
     -e EXTRA="-display none -vnc 0.0.0.0:99" \
@@ -49,14 +49,14 @@ docker run -it \
 
 Explain: find `mac_hdd_ng.img` from `/var/lib/docker` (make sure file size make sense), copy to current folder
 
-```
+```bash
 #!/bin/bash
 sudo cp `sudo find /var/lib/docker -size +10G -name mac_hdd_ng.img | head -1` .
 ```
 
 ## Generate unique serial
 
-```
+```bash
 #!/bin/bash
 mkdir tmp && cd tmp
 curl https://raw.githubusercontent.com/sickcodes/Docker-OSX/master/custom/generate-unique-machine-values.sh -O
@@ -72,7 +72,7 @@ OR if you already have a working serial configs and just want to migrate to dock
 * Create file with `nano my_permanent_serial_number.sh`
 * Content of the file
 
-```
+```sh
 export DEVICE_MODEL="DEVICE_MODEL_HERE"
 export SERIAL="SERIAL_HERE"
 export BOARD_SERIAL="BOARD_SERIAL_HERE"
@@ -86,7 +86,7 @@ export HEIGHT="768"
 
 ## First run
 
-```
+```bash
 #!/bin/bash
 source ./my_permanent_serial_number.sh
 sudo docker run -i \
@@ -120,7 +120,7 @@ sudo docker run -i \
 
 `screen` is totally optional, I just want to have stdio attached for debugging in QEMU shell
 
-```
+```bash
 #!/bin/bash
 screen -dmS macos-docker docker start -ai macos
 ```

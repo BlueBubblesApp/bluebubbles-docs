@@ -8,7 +8,7 @@ iServices are 99% likely to not run on your unofficial Mac until you successfull
 
 ## OpenCore
 
-If you made your macOS install using OpenCore, follow their [guide ](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html)to enable iServices.
+If you made your macOS install using OpenCore, follow their [guide](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html) to enable iServices.
 
 ## VMWare
 
@@ -37,12 +37,11 @@ If you would like to use a _lower_ macOS version than Catalina, you will need to
        * We recommend to use a browser with TOR functionality for this step, such as Brave Browser (use "New private window with Tor" option). This is so Apple does not rate limit you when checking serials (TOR randomizes your IP address and location every time you load the page, at the cost of network speed).
    * **Choose a Mac Address**
    * **Derive the corresponding ROM Value**
-2.  Open up a Notepad window, and type the following information (you will need this later):\
+2. Open up a Notepad window, and type the following information (you will need this later):\
     \
     (AMD USERS PLEASE MAKE SURE TO READ THE ORANGE NOTE ABOVE)\
 
-
-    ```
+    ```config
     board-id = "Mac-27AD2F918AE68F61" 
     hw.model.reflectHost = "FALSE" 
     hw.model = "MacPro7,1" 
@@ -54,13 +53,14 @@ If you would like to use a _lower_ macOS version than Catalina, you will need to
     efi.nvram.var.ROM = "<YOUR GENERATED ROM VALUE>"
     efi.nvram.var.MLB = "<YOUR GENERATED BOARD SERIAL (AKA MLB)>"
     ```
+
 3. Fully close your VM and VMware. Nothing VMware related (besides this guide of course) should be running.
 4. Open File Explorer, click Documents, open the folder named Virtual Machines, open the folder with the name of your VM, and find your .vmx file (VMware virtual machine configuration). Open it with Notepad.
 5. Scroll to the line `board-id.reflectHost = "FALSE"` and replace `FALSE` with `TRUE`.
 6. Find the line `firmware = "efi"` and paste everything from the other Notepad window right below this.
 7. Find the line `ethernet0.addressType = "generated"` and replace `generated` with `static`.&#x20;
 8. Find the line `ethernet0.generatedAddress = "xx:xx:xx:xx:xx:xx"` and replace the entire line with `ethernet0.Address = "<YOUR CHOSEN MAC ADDRESS>"`
-9.  Find the line `ethernet0.generatedAddressOffset = "0"` and replace the entire line with `ethernet0.checkMACAddress = "false"`.\
+9. Find the line `ethernet0.generatedAddressOffset = "0"` and replace the entire line with `ethernet0.checkMACAddress = "false"`.\
 
 
     {% hint style="warning" %}
@@ -68,13 +68,13 @@ If you would like to use a _lower_ macOS version than Catalina, you will need to
 
     Make sure that your VMX does not have any duplicate items from your previous modifications to make the VM start up! You may need to delete the following from the previous modifications:
 
-    ```
+    ```config
     smbios.reflectHost = "TRUE"
     hw.model = "<HW MODEL FROM AMD GUIDE>" 
     board-id = "<BOARD ID FROM AMD GUIDE>"
     ```
-    {% endhint %}
 
+    {% endhint %}
 
 10. Save the .vmx file inside Notepad, boot it up, and try signing into your Apple ID from within the iMessage app. If all went well, you will be able to sign in and send messages.
 
@@ -92,7 +92,7 @@ If you would like to use a _lower_ macOS version than Catalina, you will need to
 
 Run the following in terminal:
 
-```
+```bash
 sudo rm -rf ~/Library/Caches/com.apple.iCloudHelper*
 sudo rm -rf ~/Library/Caches/com.apple.Messages*
 sudo rm -rf ~/Library/Caches/com.apple.imfoundation.IMRemoteURLConnectionAgent*

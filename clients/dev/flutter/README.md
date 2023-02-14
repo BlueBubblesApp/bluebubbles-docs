@@ -6,13 +6,13 @@ Check the sidebar for all the documentation! **(WIP)**
 
 ## Flutter "Review"
 
-As mentioned in [#why-flutter](../../#why-flutter "mention"), we chose Flutter over building something in React Native, or in Java itself. When deciding our framework, we never had full cross platform in mind, and rather we were focusing on the ease of development. While native Android would definitely provide the best overall user experience, we decided to make a small tradeoff on this aspect to utilize Flutter's ease of use, scaleability, and quick turnaround times.
+As mentioned in [#why-flutter](../../#why-flutter "mention"), we chose Flutter over building something in React Native, or in Java itself. When deciding our framework, we never had full cross platform in mind, and rather we were focusing on the ease of development. While native Android would definitely provide the best overall user experience, we decided to make a small tradeoff on this aspect to utilize Flutter's ease of use, scalability, and quick turnaround times.
 
 ### What We Love
 
-By far and away, the best thing about Flutter has to be the ease of development. Flutter layouting and UI is ridiculously easy to understand, and creating great UI is a simple task. We also really like Dart syntax, it makes code very readable and has a lot of great features to make coding easier.
+By far and away, the best thing about Flutter has to be the ease of development. Flutter layout design and UI is ridiculously easy to understand, and creating great UI is a simple task. We also really like Dart syntax, it makes code very readable and has a lot of great features to make coding easier.
 
-Pub has been a great package repo - There are so many high quality packages available to drop into your project and eliminate the need for a ton of boilerplate code. We use everything from small UI packages to larger state / framework / dependency mangement packages.
+Pub has been a great package repo - There are so many high quality packages available to drop into your project and eliminate the need for a ton of boilerplate code. We use everything from small UI packages to larger state / framework / dependency management packages.
 
 There is definitely much more to like, but it isn't important to list all that here.
 

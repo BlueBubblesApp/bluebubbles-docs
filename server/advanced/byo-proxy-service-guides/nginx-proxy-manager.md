@@ -27,11 +27,11 @@ description: >-
    8. Check all 4 options
 3. Your Bluebubbles instance should now be accessible at `https://bb.yourdomain.com` !
 
-![](<../../.gitbook/assets/image (6).png>)
+![SSL Settings](<../../.gitbook/assets/image (6).png>)
 
-![](<../../.gitbook/assets/image (3).png>)
+![Connection Settings](<../../.gitbook/assets/image (3).png>)
 
-![](../../.gitbook/assets/image.png)
+![Proxy Host](../../.gitbook/assets/image.png)
 
 #### Credit
 

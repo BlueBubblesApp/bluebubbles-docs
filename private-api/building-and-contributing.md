@@ -24,13 +24,13 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
 3. Once inside Xcode, make sure you are signed into your Apple Developer account.
 4. Open the `BlueBubblesHelper` target window inside Xcode, and navigate to the signing tab. Set the Team dropdown to the result that comes up with your Apple ID.
 
-![](<.gitbook/assets/image (1).png>)
+![BlueBubblesHelper](<.gitbook/assets/image (1).png>)
 
 1. Now, you are ready to build. Just hit the play button, and the built bundle file will automatically install in MacForge. The iMessage app will quit and re-open to synchronize the changes.
 
 ## Contributing
 
-Hey there, and welcome! We are always eager to have new contributors working on our projects. First and foremost, we recommend joining our [Discord ](https://discord.gg/sccHbCgh)as that is the best place you can get in touch with the main developers to discuss new features, ideas, or changes you're planning to make. Now, on to the guide...
+Hey there, and welcome! We are always eager to have new contributors working on our projects. First and foremost, we recommend joining our [Discord](https://discord.gg/sccHbCgh) as that is the best place you can get in touch with the main developers to discuss new features, ideas, or changes you're planning to make. Now, on to the guide...
 
 {% hint style="warning" %}
 The Helper Bundle is quite challenging to get a hang of. The reason for this is because none of the internal iMessage Framework methods are commented or documented in any way. The only reasonable method of development is to make educated guesses and brute-force until you find something that works.
@@ -57,18 +57,18 @@ The Helper Bundle development is filled with some jargon that might appear confu
 ### Contribution Resources
 
 1. [Tweak Development Wiki](https://iphonedev.wiki/index.php/Main\_Page) - if you are new to reverse engineering, this may be a helpful resource.
-2. [w0lfschild macOS Headers ](https://github.com/w0lfschild/macOS\_headers)- pre-dumped headers for macOS Big Sur and up **only**. If you are developing for Catalina and under, you will need to dump headers on your own machine, using the next tool.
-3.  [Steve Nygard class-dump ](http://stevenygard.com/projects/class-dump/)- macOS 10 only, [freedomtan classdump-dyld ](https://github.com/freedomtan/classdump-dyld/)- macOS 11 only.
+2. [w0lfschild macOS Headers](https://github.com/w0lfschild/macOS\_headers) - pre-dumped headers for macOS Big Sur and up **only**. If you are developing for Catalina and under, you will need to dump headers on your own machine, using the next tool.
+3. [Steve Nygard class-dump](http://stevenygard.com/projects/class-dump/) - macOS 10 only, [freedomtan classdump-dyld](https://github.com/freedomtan/classdump-dyld/) - macOS 11 only.
 
     Currently there is no classdump tool that we know of which works on macOS Monterey. However, all Big Sur header files should work fine on Monterey machines.
 4. [dyld\_shared\_cache\_util](https://lapcatsoftware.com/articles/bigsur.html) - open-source tool from Apple that also dumps headers on macOS 11. This has not been tested by any developers as of yet, but may be a good alternative to freedomtan's classdump-dyld fork.
-5. [ZKSwizzle ](https://github.com/alexzielenski/ZKSwizzle)- this tool is already built into the bundle. You can use it to "intercept" Objective-C method calls and see what arguments are passed to them.
+5. [ZKSwizzle](https://github.com/alexzielenski/ZKSwizzle) - this tool is already built into the bundle. You can use it to "intercept" Objective-C method calls and see what arguments are passed to them.
 
 ### Development Process
 
 The following will attempt to outline how our development process runs from start to finish when adding a new feature to the bundle.
 
-1.  Is the feature reasonable to implement and can we get it to work cross-platform with all clients? Will we be able to send the required data to the bundle from the server app?
+1. Is the feature reasonable to implement and can we get it to work cross-platform with all clients? Will we be able to send the required data to the bundle from the server app?
 
     This step is important to ask yourself. Ultimately the bundle is meant to be a companion to the server and clients, since it can't be used as a standalone app. We have to make sure the feature  is reasonable in scope and can actually be implemented on clients.
 
@@ -80,7 +80,7 @@ The following will attempt to outline how our development process runs from star
    4. Keep testing until you've got code that works!
 3. By this point, you should have working code for your feature. Congrats! The next step is to make sure your code is clean, safe from exceptions, typed properly with correct arguments, and can send correctly-formatted data back to the server, when applicable. We encourage that you comment your code as well.
 4. You probably only developed the integration inside the folder for your macOS version, whether that be `10` or `11+`. If the iMessage feature is not version-specific, we also need to add your code to the other folder's `BlueBubblesHelper.m` file. You have 2 options:
-   1. Make a VM on your macOS device following the guide for the OS you need: [Big Sur ](https://travellingtechguy.blog/macos-big-sur-on-vmware-fusion-12/)or [Catalina](https://travellingtechguy.blog/vmware-dep/). We highly recommend using a burner Apple ID on these VMs just in case Apple has a bad mood when you make the VM.
+   1. Make a VM on your macOS device following the guide for the OS you need: [Big Sur](https://travellingtechguy.blog/macos-big-sur-on-vmware-fusion-12/) or [Catalina](https://travellingtechguy.blog/vmware-dep/). We highly recommend using a burner Apple ID on these VMs just in case Apple has a bad mood when you make the VM.
    2. Reach out to a main developer (Tanay has a Catalina and Monterey VM on his Big Sur Mac), and they can add / test your code on the other macOS folder.
 5. Make a PR :)
 

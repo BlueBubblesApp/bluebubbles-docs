@@ -16,7 +16,7 @@ Github Releases
 Microsoft Store Download
 {% endembed %}
 
-### Standalone Executable
+### Standalone Executable (Windows)
 
 1. Download `bluebubbles_standalone.exe` from GitHub releases (linked above)
 2. Run the installer
@@ -31,7 +31,7 @@ Microsoft Store Download
 BlueBubbles on Flathub
 {% endembed %}
 
-### Standalone Executable
+### Standalone Executable (Linux)
 
 1. Download `bluebubbles_linux.zip` from GitHub Releases (linked above)
 2. Unzip `bluebubbles_linux.zip`
@@ -48,6 +48,6 @@ Note: You might need to install the following dependencies:&#x20;
 
 You can use the following command:
 
-```
+```bash
 sudo apt-get -y install libnotify-dev vlc libvlc-dev appindicator3-0.1 libappindicator3-dev
 ```

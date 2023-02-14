@@ -45,9 +45,9 @@ Building yourself will cause you to lose the ability to insert GIFs from your ke
 
 1. Install NuGet package manager
 2. Go to Visual Studio Installer -> Modify Build Tools -> Individual Components and install the latest Windows 10 SDK
-3.  Run the following commands:
+3. Run the following commands:
 
-    ```
+    ```cmd
     <stash content commit changes>
     flutter clean
     git reset
@@ -77,7 +77,7 @@ Make sure you've completed [#pre-requisites](build-yourself-contribution-guide.m
 4. Make your changes
 5. Run the app using `flutter run` or the green play button at the top of your IDE
 6. Test your changes
-7.  Commit and PR!
+7. Commit and PR!
 
     Make sure you don't commit your changes to comment out `onContentCommit`.
 
