@@ -114,5 +114,6 @@ In order to use your new Dynamic DNS with BlueBubbles, simply follow these steps
 2. Open the Settings tab
 3. Find the `Proxy Service` drop down and select `Dynamic DNS`.
 4. You will get a popup window asking you for a server URL. Enter your dynamic DNS URL + Port (i.e. `http://<dynamic dns>:<port>`)
-   1. If you have a certificate setup, set your server URL using the HTTPS schema. Make sure to also enable the `Use HTTPS` option in the server's settings and to manually load your certificates into the BlueBubbles `Certs` folder.
-5. You should now be configured to use BlueBubbles via Port-forwarding.
+5. If you have an SSL Certificate, set your server URL to HTTPS instead of HTTP. Make sure to also enable `Settings > Advanced Connection Settings > Use Custom Certificate`. Once enabled, a self-signed certificate (`server.key` and `server.pem`) will be created in `~/Library/Application Support/bluebubbles-server/Certs`. Replace both files with your certificate files. It is important to name these files exactly the same as the self-signed certificate files that were created. _Note: If your certificate file ends in .crt, simply rename it to .pem._
+6. Restart your BlueBubbles server to activate your new settings.
+7. You should now be configured to use BlueBubbles via port-forwarding.
