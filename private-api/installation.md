@@ -9,7 +9,7 @@ In order to get Private API features, you must disable MacOS extra security meas
 {% endhint %}
 
 {% hint style="info" %}
-Disabling SIP can be challenging, we recommend joining our [Discord ](https://discord.gg/BdsGwREh)to get assistance with the process if you need it!
+Disabling SIP can be challenging, we recommend joining our [Discord](https://discord.gg/BdsGwREh) to get assistance with the process if you need it!
 {% endhint %}
 
 {% hint style="danger" %}
@@ -64,17 +64,18 @@ Please follow the instructions for your macOS version in the tabs below.
 
 {% tabs %}
 {% tab title="macOS 10.13-10.15 (Sierra-Catalina)" %}
+
 1. Open Terminal on your macOS device
-2.  Run the following command to disable Library Validation and enter your password when prompted.
+2. Run the following command to disable Library Validation and enter your password when prompted.
 
     `sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true`
 3. Run the following commands to force your Mac to reboot into recovery mode:
    * **WARNING**: _DO NOT do this step or step 4-5_ if you are running dos1dude's patched High Sierra/Mojave/Catalina. It may temporarily brick your Mac until you reset your NVRAM/PRAM
-   * **If you are on **_**a real Mac with official macOS**_, do the following:
+   * **If you are on** _**a real Mac with official macOS**_, do the following:
      1. **WARNING**: This will instantly reboot your Mac. Save everything before executing this command!
      2. `sudo nvram recovery-boot-mode=unused`
      3. `sudo reboot recovery`
-   * **If you are using **_**a Virtual Machine or a patched macOS software**_, follow [this guide.](https://docs.bluebubbles.app/server/advanced/running-on-macos-vm/disable-sip-on-vms)
+   * **If you are using** _**a Virtual Machine or a patched macOS software**_, follow [this guide.](https://docs.bluebubbles.app/server/advanced/running-on-macos-vm/disable-sip-on-vms)
 4. When you are booted into `Recovery Mode`:
    * Click on `Utilities` in the top menu bar
    * Select `Terminal`
@@ -86,11 +87,11 @@ Please follow the instructions for your macOS version in the tabs below.
 8. Download the latest [BlueBubbles Helper Bundle](https://github.com/BlueBubblesApp/BlueBubbles-Server-Helper/releases) for MacForge/MySIMBL (please pay attention to macOS version on the .zip file)
 9. If you have not already, unzip the ZIP file containing the `BlueBubblesHelper.bundle`
 10. Follow the instructions below for either MacForge or mySIMBL
-    * **If you installed **_**MacForge**_
+    * **If you installed** _**MacForge**_
       1. Open the `MacForge App`, then drag and drop the `.bundle` file into the `Manage Plug-ins` page/tab.
       2. This will automatically install this helper plugin. To verify, you may check under the `/Library/Application Support/MacEnhance/Plugins/` directory, where you should see `BlueBubblesHelper.bundle`
       3. Confirm that the BlueBubblesHelper plugin is toggled to `library`, and not `user`, within MacForge (the icon should show 2 people, not 1 person)
-    * **If you installed **_**mySIMBL**_
+    * **If you installed** _**mySIMBL**_
       1. Open the `mySIMBL App`, then go to the `Manage` tab
       2. Click the `+` button and select the `BlueBubblesHelper.bundle`
       3. Verify that the bundle is enabled and running
@@ -102,8 +103,9 @@ Please follow the instructions for your macOS version in the tabs below.
 {% endtab %}
 
 {% tab title="macOS 11+ (Big Sur+)" %}
+
 1. Open Terminal on your macOS device
-2.  Run the following command to disable Library Validation and enter your password when prompted.
+2. Run the following command to disable Library Validation and enter your password when prompted.
 
     `sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true`
 3. Follow the instructions below for your device type
@@ -154,14 +156,14 @@ Here are some basic troubleshooting steps. Please try these out, and if you need
 * Try force quitting and reopening the server (with private API switch toggled on), and then force quit and reopen the iMessage app
 * Make sure your bundle is toggled to "library" mode in MacForge / mySIMBL (the icon next to it should have 2 people, not 1 person)
 * If you are on Apple Silicon, make sure you have Beta MacForge and that the BlueBubblesHelper bundle has a green dot for Apple Silicon.
-*   Check the MacForge / mySIMBL system tab. It should show these values on Intel:
+* Check the MacForge / mySIMBL system tab. It should show these values on Intel:
 
-    ![](.gitbook/assets/image.png)
+    ![Selected](.gitbook/assets/image.png)
 
     or it should show all green dots on Apple Silicon.
 
-    * If you see Library Validation enabled, try step 2 of the [#instructions](installation.md#instructions "mention") again.
-    * If you see System Integrity Protection enabled, run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
-    * If any of the checkboxes are not checked, make sure you are running MacForge inside an Administrator account with all privileges.
+  * If you see Library Validation enabled, try step 2 of the [#instructions](installation.md#instructions "mention") again.
+  * If you see System Integrity Protection enabled, run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
+  * If any of the checkboxes are not checked, make sure you are running MacForge inside an Administrator account with all privileges.
 
 If none of this works, you should join our Discord and the developers will be able to help you out. In your post, please include your macOS version, Mac chipset (Intel / Apple Silicon), your bundle version, your server version, and a picture of the MacForge / mySIMBL system. Thanks!

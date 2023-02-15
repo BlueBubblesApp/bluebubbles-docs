@@ -34,4 +34,3 @@ The bundle supports both Intel and Apple Silicon Macs.
 {% hint style="warning" %}
 Apple Silicon currently requires using beta MacForge, which can be found [here.](https://github.com/MacEnhance/appcast/raw/master/Beta/MacForge/MacForge.1.2.0B1.zip)&#x20;
 {% endhint %}
-

@@ -13,7 +13,7 @@ Chat objects are defined as `IMChat`, and we access these via a lookup by `guid`
 To do this, you'll want to add the `IMChatRegistry.h` header into your project.
 
 ```objectivec
-// Retreive a IMChat instance from a given guid
+// Retrieve a IMChat instance from a given guid
 //
 // Uses the chat registry to get an existing instance of a chat based on the chat guid
 +(IMChat *) getChat: (NSString *) guid {
@@ -264,6 +264,7 @@ This is an asynchronous process in IMCore, so it requires the use of a completio
 
 {% tabs %}
 {% tab title="macOS 10 (no replies)" %}
+
 ```objectivec
 // now we will deserialize the attributedBody if it exists
 NSDictionary *attributedDict = data[@"attributedBody"];
@@ -304,9 +305,11 @@ void (^createMessage)(NSAttributedString*, NSAttributedString*, NSString*, NSStr
 
 createMessage(attributedString, subjectAttributedString, effectId, nil);
 ```
+
 {% endtab %}
 
 {% tab title="macOS 11+ (replies)" %}
+
 ```objectivec
 // now we will deserialize the attributedBody if it exists
 NSDictionary *attributedDict = data[@"attributedBody"];
@@ -374,6 +377,7 @@ if (data[@"selectedMessageGuid"] != [NSNull null] && [data[@"selectedMessageGuid
     createMessage(attributedString, subjectAttributedString, effectId, nil);
 }`
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -445,6 +449,7 @@ This function simply converts text based reaction types to their integer counter
 
 {% tabs %}
 {% tab title="macOS 10" %}
+
 ```objectivec
 //Map the reaction type
 long long reactionLong = [BlueBubblesHelper parseReactionType:(data[@"reactionType"])];
@@ -476,6 +481,7 @@ long long reactionLong = [BlueBubblesHelper parseReactionType:(data[@"reactionTy
     }
 }];
 ```
+
 {% endtab %}
 
 {% tab title="macOS 11+" %}
@@ -567,6 +573,7 @@ long long reactionLong = [BlueBubblesHelper parseReactionType:(data[@"reactionTy
 ### Editing a Message
 
 {% code lineNumbers="true" %}
+
 ```objectivec
 // get the chat
 IMChat *chat = [BlueBubblesHelper getChat: data[@"chatGuid"] :transaction];
@@ -580,6 +587,7 @@ IMChat *chat = [BlueBubblesHelper getChat: data[@"chatGuid"] :transaction];
     [chat editMessage:(message) atPartIndex:(index) withNewPartText:(editedString) backwardCompatabilityText:(bcString)];
 }];
 ```
+
 {% endcode %}
 
 This one is fairly easy. The only tricky part is the part index, which corresponds to which part of a message is being edited. Sometimes, a message can be stacked as so:
@@ -595,12 +603,13 @@ The part index tells IMCore which part of the message is actually being edited, 
 ### Unsending a Message
 
 {% code lineNumbers="true" %}
+
 ```objectivec
 // get the chat
 IMChat *chat = [BlueBubblesHelper getChat: data[@"chatGuid"] :transaction];
 // get the message
 [BlueBubblesHelper getMessageItem:(chat) :(data[@"messageGuid"]) completionBlock:^(IMMessage *message) {
-    // find the message item corresponsing to the part index
+    // find the message item corresponding to the part index
     IMMessageItem *messageItem = (IMMessageItem *)message._imMessageItem;
     NSObject *items = messageItem._newChatItems;
     IMMessagePartChatItem *item;
@@ -619,6 +628,7 @@ IMChat *chat = [BlueBubblesHelper getChat: data[@"chatGuid"] :transaction];
     [chat retractMessagePart:(item)];
 }];
 ```
+
 {% endcode %}
 
 As with editing a message, the part index is crucial to know which part has been unsent and then use the `IMMessagePartChatItem` in the method correctly.
@@ -626,4 +636,4 @@ As with editing a message, the part index is crucial to know which part has been
 ## Currently Known Issues
 
 1. Sometimes, the `IMMessagePartChatItem` will not exist. This is almost always for messages that are old. If this happens, tapbacks won't work, and replies will have a weird bug where they attach to an "empty" message. See this [ticket](https://github.com/BlueBubblesApp/bluebubbles-helper/issues/11) for more details.
-2. The reaction function currently doesn't support reacting to a message with multiple parts, for example a message with multiple attachments. This is likely also to do with `IMMessagePartChatItem` but we haven't figured it out quite yet. See this [ticket ](https://github.com/BlueBubblesApp/bluebubbles-helper/issues/8)for more details.
+2. The reaction function currently doesn't support reacting to a message with multiple parts, for example a message with multiple attachments. This is likely also to do with `IMMessagePartChatItem` but we haven't figured it out quite yet. See this [ticket](https://github.com/BlueBubblesApp/bluebubbles-helper/issues/8) for more details.

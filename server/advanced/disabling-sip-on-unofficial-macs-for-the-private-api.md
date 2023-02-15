@@ -8,7 +8,7 @@ Here are some steps that have worked for our users running various different uno
 
 Use the OpenCore Configurator and check the following boxes:
 
-![](<../.gitbook/assets/image (1).png>)
+![SIP Config](<../.gitbook/assets/image (1).png>)
 
 Once complete, build OpenCore again and reboot. Done!
 
@@ -24,60 +24,51 @@ Once complete, build OpenCore again and reboot. Done!
 
 ### Method 1
 
-1.  Start by booting to macOS and opening a Terminal application window. Next, enter the command given below. This will create a NVRAM variable with the desired value, but misspelled variable name. This misspelling will be corrected in a later step.\
+1. Start by booting to macOS and opening a Terminal application window. Next, enter the command given below. This will create a NVRAM variable with the desired value, but misspelled variable name. This misspelling will be corrected in a later step.\
 
-
-    ```
+    ```bash
     sudo nvram Asr-active-config=%7f%00%00%00
     ```
 
+2. Shutdown macOS. Add the following to the bottom of the VMX file:\
 
-2.  Shutdown macOS. Add the following to the bottom of the VMX file:\
-
-
-    ```
+    ```config
     bios.forceSetupOnce = "TRUE"
     ```
 
     \
     Save the VMX file and boot up macOS.\
 
-3.  You should be brought to the Boot Manager screen below. Select the `EFI Internal Shell`, as shown below.\
+3. You should be brought to the Boot Manager screen below. Select the `EFI Internal Shell`, as shown below.\
 
+    [![Boot Manager](https://i.stack.imgur.com/muLxs.png)](https://i.stack.imgur.com/muLxs.png)
 
-    [![](https://i.stack.imgur.com/muLxs.png)](https://i.stack.imgur.com/muLxs.png)
+4. Set the current filesystem to the EFI volume. This should be the mapped `fs0` filesystem, so you would enter the following\
 
-
-4.  Set the current filesystem to the EFI volume. This should be the mapped `fs0` filesystem, so you would enter the following\
-
-
-    ```
+    ```bash
     fs0:
     ```
 
     \
     Next, verify the label is `EFI` by entering the command below.\
 
-
-    ```
+    ```bash
     vol
     ```
 
     \
     If wrong, then try `fs1:`, `fs2:`, `fs3:`, ....\
 
-5.  Enter the command below to save the `Asr-active-config` variable to the file `csr.bin`.\
+5. Enter the command below to save the `Asr-active-config` variable to the file `csr.bin`.\
 
-
-    ```
+    ```bash
     dmpstore Asr-active-config -s csr.bin
     ```
 
     \
     Next, enter the command below to edit the `csr.bin` file.\
 
-
-    ```
+    ```bash
     hexedit csr.bin
     ```
 
@@ -90,30 +81,25 @@ Once complete, build OpenCore again and reboot. Done!
     \
     Enter the command below to create the `csr-active-config` variable in NVRAM.\
 
-
-    ```
+    ```bash
     dmpstore -l csr.bin
     ```
 
     \
     SIP will now be disabled on the next boot of macOS. If desired, enter the command below to remove the `Asr-active-config` variable from NVRAM.\
 
-
-    ```
+    ```bash
     dmpstore -d Asr-active-config
     ```
 
+6. Enter the command below to leave the command shell.\
 
-6.  Enter the command below to leave the command shell.\
-
-
-    ```
+    ```bash
     exit
     ```
 
     \
     From the `Boot Manager`, select `Mac OS X` to boot macOS.\
-
 
 ### Method 2 (Requires VMWare Workstation Pro)
 

@@ -8,11 +8,11 @@ description: >-
 
 ## Intro
 
-Initially, our app used the [`sqflite` ](https://pub.dev/packages/sqflite)package as our database (i.e. SQLite). The iMessage database on macOS is an SQLite database, so it made the most sense for our app to emulate the same structure (which it did, we copied the CREATE statements for each table and used them to build our own internal database).
+Initially, our app used the [`sqflite`](https://pub.dev/packages/sqflite) package as our database (i.e. SQLite). The iMessage database on macOS is an SQLite database, so it made the most sense for our app to emulate the same structure (which it did, we copied the CREATE statements for each table and used them to build our own internal database).
 
 This worked well for the most part, but we hit a major roadblock when we decided to port our app to desktop platforms using Flutter and the [`sqflite_common_ffi`](https://pub.dev/packages/sqflite\_common\_ffi) package - The speeds decreased dramatically. A simple DB call could take upwards of 5-10 seconds, and this was causing significant delay for actions like loading chats, message threads, etc which should normally take up to 1 second.
 
-As a result, we decided to look into alternative databases. We landed on two potential ones: [`sqlite3` ](https://pub.dev/packages/sqlite3)and [`objectbox`](https://pub.dev/packages/objectbox). We first tried `sqlite3` to avoid a huge migration of code, but it was the same issue - speeds were too slow on desktop. Then, we moved to `objectbox`. The speed issue was resolved, but we discovered a whole host of other issues that required some hacky workarounds and advanced Dart coding to resolve, and this page will discuss that in depth.
+As a result, we decided to look into alternative databases. We landed on two potential ones: [`sqlite3`](https://pub.dev/packages/sqlite3) and [`objectbox`](https://pub.dev/packages/objectbox). We first tried `sqlite3` to avoid a huge migration of code, but it was the same issue - speeds were too slow on desktop. Then, we moved to `objectbox`. The speed issue was resolved, but we discovered a whole host of other issues that required some hacky workarounds and advanced Dart coding to resolve, and this page will discuss that in depth.
 
 ## Web Support
 

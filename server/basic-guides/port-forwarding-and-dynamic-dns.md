@@ -7,7 +7,7 @@ description: >-
 
 # Port Forwarding & Dynamic DNS
 
-Before you begin, make sure that the following pre-requisites apply to you. If _**any** _ of them do not apply to you, this will not be possible for you, and you may need to stick to the build-in proxy services, pay for one, or self-host a reverse proxy.
+Before you begin, make sure that the following pre-requisites apply to you. If _**any**_ of them do not apply to you, this will not be possible for you, and you may need to stick to the build-in proxy services, pay for one, or self-host a reverse proxy.
 
 ## Pre-requisites
 

@@ -4,9 +4,7 @@ description: Landing page for our documentation
 
 # BlueBubbles Documentation
 
-![](.gitbook/assets/image.png)
-
-
+![BlueBubbles On Phone and Desktop](.gitbook/assets/image.png)
 
 Hey there, and welcome to the BlueBubbles documentation! This will provide links to the main documentation, as well as quick links to popular BlueBubbles guides.
 
