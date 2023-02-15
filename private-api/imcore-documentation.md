@@ -584,7 +584,7 @@ IMChat *chat = [BlueBubblesHelper getChat: data[@"chatGuid"] :transaction];
     NSMutableAttributedString *bcString = [[NSMutableAttributedString alloc] initWithString: data[@"backwardsCompatibilityMessage"]];
     NSInteger index = data["@partIndex"];
     // send the edit
-    [chat editMessage:(message) atPartIndex:(index) withNewPartText:(editedString) backwardCompatibilityText:(bcString)];
+    [chat editMessage:(message) atPartIndex:(index) withNewPartText:(editedString) backwardCompatabilityText:(bcString)];
 }];
 ```
 
