@@ -17,7 +17,7 @@ If virtualization is _disabled_, you need to boot into your PC's BIOS and enable
 
 The first step in setting up a virtual machine is getting an image that is compatible with our virtualization software, in this case, VMWare. To do this, we will use OpenCore. The following instructions are a shortened form of the full OpenCore Install Guide:
 
-[https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html)
+[https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html)
 
 **Note**: This method is preferred over downloading an existing ISO from the internet because you never know when the integrity of an ISO from the internet might be compromised.
 
@@ -35,7 +35,7 @@ The first step in setting up a virtual machine is getting an image that is compa
 4. Holding `Shift` on your keyboard, right-click your explorer window and select `Open PowerShell window here`.
 5. Run the python command corresponding to the macOS version you want to download, found in the OpenCore Install Guide.
 
-    * [https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos)
+    * [https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html#downloading-macos](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html#downloading-macos)
     * Running the command will download the `BaseSystem.dmg` image from Apple's servers
 
     {% hint style="info" %}
