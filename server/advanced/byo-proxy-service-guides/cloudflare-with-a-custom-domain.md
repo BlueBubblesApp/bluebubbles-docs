@@ -25,29 +25,24 @@ Cons:
 
 ### **Setting up Cloudflare tunnels with your domain**
 
-1. In the terminal type `cloudflared tunnel create <NAME>` - replace name to the desired name of your tunnel, it can be anything
-2. Download the following config.yml template open it text edit (or other text editors) and replace the \[username] with the username of your mac server and replace the \[tunnel id] with your tunnel id (if your forgot it in the terminal type `cloudflared tunnel list` and it should show up&#x20;
-   * [https://raw.githubusercontent.com/Rihcus/Bluebububbles-Cloudflare-guide/main/config.yml](https://raw.githubusercontent.com/Rihcus/Bluebububbles-Cloudflare-guide/main/config.yml)
-3. move the config.yml file to `/Users/[username]/.cloudflared`
-4. in the terminal type `cloudflared run <NAME>`
-5. in BlueBubbles settings set the proxy service to dynamic dns and enter your hostname and port
-6. Try to connect the server using the Android, Desktop, or Web App to see if it works
+1. Login to the Zero Trust dashboard at [https://dash.teams.cloudflare.com/](https://dash.teams.cloudflare.com/) and go to Access > Tunnels.
+2. Select Create a tunnel
+3. Enter a name for your tunnel. For example, you could name it Bluebubbles.
+4. Select Save tunnel
+5. Next, you will need to install cloudflared and run it. You can install it here, [https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)
+6. After installing cloudflared, you can see that when choosing your OS as Mac, cloudflare provides a command to enter into terminal. Run this command.
+7. Once the command has been run successfully, your connector will show up underneath the command in the Zero Trust Dashboard.
+8. Select Next
+9. Now in the Public Hostnames tab, type in your subdomain, for example, bluebubbles.(This does not have to be the name of your tunnel)
+10. Choose the main domain you want to use for it.
+11. Below, you should see a section called Service. For this, you want to put the localhost address for the bluebubbles server. The default one would be: HTTP://localhost:1234 .
+12. Save the tunnel
 
-### **Setting Cloudflare to launch at boot**
+As we installed cloudflared as a service, it should automatically launch at startup.
 
-1. in the terminal type `sudo cloudflared service install`
-2. download the `com.cloudflare.cloudflared.plist` template and replace \[YOUR TUNNEL ID] to your cloudflare tunnel id without the brackets (if your forgot it in the terminal type `cloudflared tunnel list` and it should show up) [https://raw.githubusercontent.com/Rihcus/Bluebububbles-Cloudflare-guide/main/com.cloudflare.cloudflared.plist](https://raw.githubusercontent.com/Rihcus/Bluebububbles-Cloudflare-guide/main/com.cloudflare.cloudflared.plist)
-3. Copy your modified `com.cloudflare.cloudflared.plist` to `/Library/LaunchDaemons` (if prompted to overwrite click yes)
-4. type in terminal `sudo launchctl start com.cloudflare.cloudflared` to start the service, cloudflare should auto start at boot now
+### **Setting the bluebubbles server to the dynamic dns**
+1. Navigate to the settings page of the server app
+2. Change the proxy to dynamic dns
+3. For the URL, type in the url displayed in the tunnels section of the Zero Trust dashboard. Make sure you use HTTPS as cloudflare uses that by default.
 
-#### **Helpful resources:**
-
-[https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation)
-
-[https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel)
-
-[https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file)
-
-[https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/run-as-service](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/run-as-service)
-
-[https://support.apple.com/lv-lv/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac](https://support.apple.com/lv-lv/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac)
+Now try opening the bluebubbles app and see if it connects.
