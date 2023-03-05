@@ -37,6 +37,7 @@ Cons:
 10. Choose the main domain you want to use for it.
 11. Below, you should see a section called Service. For this, you want to put the localhost address for the bluebubbles server. The default one would be: HTTP://localhost:1234 .
 12. Save the tunnel
+13. After doing this, you may need to run sudo launchctl start _com.cloudflare.cloudflared_ when initially setting up the tunnel to start it.
 
 As we installed cloudflared as a service, it should automatically launch at startup.
 
