@@ -8,6 +8,10 @@
 * [Supporting the Project](supporting-the-project.md)
 * [Licenses / Legal](licenses-legal.md)
 
+## Usage Guides
+
+* [Using BlueBubbles with Adguard](usage-guides/using-bluebubbles-with-adguard.md)
+
 ## For Developers <a href="#dev" id="dev"></a>
 
 * [Flutter](dev/flutter/README.md)
