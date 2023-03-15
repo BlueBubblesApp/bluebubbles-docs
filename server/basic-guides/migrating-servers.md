@@ -16,7 +16,7 @@ This guide does not cover redoing the Private API setup. You will need to do tha
 3. Navigate to the `iMessage` tab
 4. Turn on `Enable Messages in iCloud` to backup your messages to iCloud
    * If you do not care to backup your messages to iCloud, skip this step
-   * If the option wasn't already enabled, click the `Sync Now` button and give your Mac some some to fully sync the messages (\~24 hrs to be safe)
+   * If the option wasn't already enabled, click the `Sync Now` button and give your Mac some time to fully sync the messages (\~24 hrs to be safe)
 5. Shutdown your **old** BlueBubbles Mac
 6. On your **new** BlueBubbles Mac, sign into iMessage and wait for your messages to sync
    * Note: It's always good to confirm you can send iMessages using the native Messages app before proceeding.
