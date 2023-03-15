@@ -11,6 +11,7 @@
 
 * [Port Forwarding & Dynamic DNS](basic-guides/port-forwarding-and-dynamic-dns.md)
 * [Preventing macOS from Sleeping](basic-guides/preventing-macos-from-sleeping.md)
+* [Migrating Servers](basic-guides/migrating-servers.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
