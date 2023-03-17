@@ -14,7 +14,7 @@ The goal of this page is to show you how you can do some automation around iMess
 
 Before setting up any webhooks with the BlueBubbles Server, you need to create a web server to receive the webhook requests that the server will be emitting.
 
-There are tools out there built for automation that do this for you such as n8n. However, if you want full controller over the code, I recommend building a webserver yourself.
+There are tools out there built for automation that do this for you such as [n8n](https://n8n.io/). However, if you want full controller over the code, I recommend building a webserver yourself.
 
 Here are some quick implementation code in various languages.
 
