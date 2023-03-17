@@ -49,4 +49,4 @@
 * [Build Yourself / Contribution Guide](developer-guides/build-yourself-contribution-guide.md)
 * [REST API & Webhooks](developer-guides/rest-api-and-webhooks.md)
 * [Simple Web Server for Webhooks](developer-guides/simple-web-server-for-webhooks/README.md)
-  * [Python Web Server](developer-guides/simple-web-server-for-webhooks/python-web-server.md)
+  * [Python Web Server Example](developer-guides/simple-web-server-for-webhooks/python-web-server-example.md)
