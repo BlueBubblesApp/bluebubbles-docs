@@ -4,8 +4,15 @@ description: >-
   events.
 ---
 
-# Python Web Server
+# Python Web Server Example
 
+Most of the code below is boilerplate code. The important pieces to change are lines 9 and 64-104.
+
+On line 9, you need to set your server password.
+
+Lines 64-104 define which events are handled, and how they are being handled. Those are likely the lines you want to modify the most to customize the functionality.
+
+{% code lineNumbers="true" %}
 ```python
 import json
 import requests
@@ -141,3 +148,4 @@ server = HTTPServer(("", 8000), PostHandler)
 print("Server started on port 8000")
 server.serve_forever()
 ```
+{% endcode %}
