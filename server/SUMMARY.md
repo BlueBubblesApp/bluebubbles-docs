@@ -16,6 +16,7 @@
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
+* [Advanced Guides - Overview](advanced/advanced-guides-overview.md)
 * [Multiple Users on the Same Mac](advanced/multiple-users-on-the-same-mac.md)
 * [Disabling SIP on Unofficial Macs for the Private API](advanced/disabling-sip-on-unofficial-macs-for-the-private-api.md)
 * [macOS Virtualization](advanced/macos-virtualization/README.md)
@@ -44,5 +45,6 @@
 
 ## Developer Guides
 
+* [Developer Guides - Overview](developer-guides/developer-guides-overview.md)
 * [Build Yourself / Contribution Guide](developer-guides/build-yourself-contribution-guide.md)
 * [REST API & Webhooks](developer-guides/rest-api-and-webhooks.md)
