@@ -2,7 +2,7 @@
 description: Here you'll find simple guides for using BlueBubbles
 ---
 
-# Basic Guides
+# Basic Guides - Overview
 
 {% embed url="https://docs.bluebubbles.app/server/basic-guides/port-forwarding-and-dynamic-dns" %}
 

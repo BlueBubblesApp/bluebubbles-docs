@@ -33,13 +33,13 @@ The first step in setting up a virtual machine is getting an image that is compa
 2. Extract the OpenCore ZIP file, and open the extracted folder.
 3. Navigate into `Utilities\macrecovery`.
 4. Holding `Shift` on your keyboard, right-click your explorer window and select `Open PowerShell window here`.
-5. Run the python command corresponding to the macOS version you want to download, found in the OpenCore Install Guide.
+5.  Run the python command corresponding to the macOS version you want to download, found in the OpenCore Install Guide.
 
     * [https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html#downloading-macos](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html#downloading-macos)
     * Running the command will download the `BaseSystem.dmg` image from Apple's servers
 
     {% hint style="info" %}
-    ### macOS Ventura
+    #### macOS Ventura
 
     If you'd like to download macOS Ventura, use the command below:
 
@@ -48,7 +48,6 @@ The first step in setting up a virtual machine is getting an image that is compa
     ```bash
     python ./macrecovery.py -b Mac-27AD2F918AE68F61 -m 00000000000000000 download
     ```
-
     {% endhint %}
 6. Next, cut/copy the `BaseSystem.dmg` file (generated in the `macrecovery` folder), to your user profile's `Documents` folder
 
@@ -177,14 +176,13 @@ cpuid.1.edx = "0000:0111:1000:1011:1111:1011:1111:1111"
 ```
 
 {% hint style="warning" %}
-### macOS Ventura
+#### macOS Ventura
 
 If your VM is macOS Ventura, you may need to add **(or edit)** the following to enable internet connectivity:
 
 ```vmx
 ethernet0.virtualDev = "vmxnet3"
 ```
-
 {% endhint %}
 
 #### Booting the Virtual Machine
@@ -232,7 +230,7 @@ By default, your macOS deployment will _not_ support iServices such as iMessage.
 
 1. Boot up your macOS virtual machine and login.
 2. Open Safari and download `Clover Configurator`.
-   * Website: <https://mackie100projects.altervista.org/download-clover-configurator/>
+   * Website: [https://mackie100projects.altervista.org/download-clover-configurator/](https://mackie100projects.altervista.org/download-clover-configurator/)
 3. Open `Clover Configurator`.
    * You may need to allow it to run via `System Preferences -> Security & Privacy`.
 4. Once opened, navigate to the `SMBIOS` tab in the sidebar.
@@ -241,7 +239,7 @@ By default, your macOS deployment will _not_ support iServices such as iMessage.
    * We recommend `MacPro7,1` or `MacBookPro16,1`
 7. Copy the following configuration to an editor (i.e. Notepad), on your host computer (Windows).
 
-``` config
+```config
 board-id = "AAA"
 hw.model.reflectHost = "FALSE"
 hw.model = "BBB"
@@ -271,7 +269,7 @@ efi.nvram.var.MLB = "EEE"
 9. Find the `board-id.reflectHost` configuration and verify that it is set to `"TRUE"`.
 10. Find the `ethernet0.addressType` configuration and change it from `"generated"` to `"static"`
 11. In your browser, go to the following link to grab an "OUI" for the configuration:
-    * <https://hwaddress.com/company/apple-inc/>
+    * [https://hwaddress.com/company/apple-inc/](https://hwaddress.com/company/apple-inc/)
     * The OUI contains 3 segments, each containing 2 characters.
     * It does not matter which OUI you choose. Choose any.
 12. Find the `ethernet0.generatedAddress` configuration and change the first 3 segments to match the 3 segments of your chosen OUI.
@@ -291,5 +289,5 @@ Here are a few final checks to make sure that your macOS virtual machine is setu
 
 * When the macOS virtual machine is booted & running, click on the `Apple Logo` and select `About this Mac`. Verify that the serial number listed matches the serial number you configured in the steps above.
 * Open `System Preferences` and open your `Date & Time` settings. Verify that your timezone is set correctly and your time is properly synced.
-  * If you are unsure, you can open Safari and go to <https://time.is> to see if your time synchronization is misaligned.
+  * If you are unsure, you can open Safari and go to [https://time.is](https://time.is) to see if your time synchronization is misaligned.
   * If your time synchronization is misaligned, you can synchronize it by opening `Terminal` and running this command: `sudo ntpdate -vu time.apple.com`
