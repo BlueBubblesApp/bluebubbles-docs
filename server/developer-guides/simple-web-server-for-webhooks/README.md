@@ -18,7 +18,7 @@ There are tools out there built for automation that do this for you such as n8n.
 
 Here are some quick implementation code in various languages.
 
-{% embed url="https://app.gitbook.com/o/tDa0Y3Y4ks00gw8fkjLv/s/ThJZqK6Woy4I46skzbiC/~/changes/56/developer-guides/simple-web-server-for-webhooks/python-web-server" %}
+{% embed url="https://docs.bluebubbles.app/server/developer-guides/simple-web-server-for-webhooks/python-web-server" %}
 
 ## Creating a Webhook
 
