@@ -1,20 +1,51 @@
+# Tailscale Funnel 
+**Requirements**
+
+- Enable [HTTPS certificates](https://login.tailscale.com/admin/dns) in the [admin console](https://login.tailscale.com/admin/dns).
+- [Add Funnel to Policy](https://login.tailscale.com/admin/acls) in the admin console.
+
 ---
-description: >-
-  This guide will show you how you can use your existing Tailscale VPN account
-  to connect to your BlueBubbles Server (via a Funnel), without port-forwarding
+
+## macOS 
+
+1. Download Tailscale from the [Mac App Store](https://apps.apple.com/ca/app/tailscale/id1475387142) or [directly from Tailscale](https://pkgs.tailscale.com/stable/#macos). Install and log in.
+2. Add an alias for the Tailscale CLI to your shell configuration for convenience. Alternatively, you can use `/Applications/Tailscale.app/Contents/MacOS/Tailscale <command>`.
+
+```bash
+echo 'alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"' | sudo tee -a ~/.zshrc
+```
+
+3. Proxy requests to BlueBubbles's local web server on port 1234.
+
+```bash
+tailscale serve https / http://127.0.0.1:1234
+```
+
+4. Enable the funnel to route proxy traffic over Tailscale funnel servers. Supported ports are 443, 8443, or 10000.
+
+```bash
+tailscale funnel 443 on
+```
+
+5. Check the funnel status with:
+
+```bash
+tailscale serve status
+```
+
+6. Finally, add the domain from step 5 to the BlueBubbles Proxy Service drop-down menu:
+
+```bash
+<https://machine-name.example.ts.net:443/>
+```
+--- 
+## Run on Host System |  macOS virutal machine
+
+To improve network bandwidth and overall connection, it may be beneficial to run Tailscale Funnel on the host system while using macOS in a virtual environment. To accomplish this, you will need to forward the local port of BlueBubbles running on macOS to the host system and then utilize Tailscale Funnel on the host to handle requests to the BlueBubbles local web server
+
 ---
-
-# Tailscale VPN Setup
-
-1. [Download the Tailscale client on macOS](https://tailscale.com/kb/1016/install-mac/) and log in.
-2. [Enable HTTPS in the Tailscale admin console and add the "funnel" attribute under "nodeAttrs" in your Tailnet policy file.](https://tailscale.com/kb/1223/tailscale-funnel/#setup)
-3. [Add Tailscale as an alias to your `.bashrc`, `.zshrc`, or shell config to make it easier](https://tailscale.com/kb/1080/cli/#using-the-cli): `alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"`&#x20;
-4. In the terminal, enter the command `tailscale serve tcp --terminate-tls 1234` (use the Bluebubbles local port). The Bluebubbles server will be served by port 443 as the default, but ports 8443 or 10000 can also be used by adding the flag `-serve-port 8443 / 10000`
-   * Reference: [https://tailscale.com/kb/1080/cli/#serve](https://tailscale.com/kb/1080/cli/#serve)
-5. Turn Tailscale Funnel on by running `tailscale serve funnel on`.&#x20;
-6. Check the funnel status by running `tailscale serve status` or in more detail by`tailscale server status --json`.&#x20;
-7. Configure Bluebubbles to use the domain listed by the command above, including the port (default 443).&#x20;
-8. Wait for Tailscale to propagate their DNS with your domain (estimated time 10 minutes to 24 hours).&#x20;
-9. Done. Tailscale will take care of certification at [https://yournode.tailscaledomain.ts.net:443/](https://yournode.tailscaledomain.ts.net/) and send it to 127.0.0.1:1234. No port forwarding is necessary.
-
-Thanks to @bobspop in Discord for creating this guide.
+- [Tailscale Funnel CLI](https://tailscale.com/kb/1080/cli/#serve)
+- [Tailscale Funnel Documentation](https://www.notion.so/Tailscale-Funnel-1ac25b9e1c5d41fda353cdd1e30e032b)
+- [Access Control Lists (ACLs)](https://tailscale.com/kb/1018/acls/)
+- [Download](https://www.notion.so/Download-Tailscale-client-for-macOS-81a4c0a03d5942de91096a98759d7349)
+- [Introduction to Tailscale funnel](https://tailscale.com/blog/introducing-tailscale-funnel/)
