@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Intro and Background](README.md)
+* [Installation Overview](README.md)
 * [Server Installation](https://bluebubbles.app/install)
 * [FAQ](https://bluebubbles.app/faq)
 * [Private API Setup](https://docs.bluebubbles.app/helper-bundle/installation)
@@ -9,11 +9,14 @@
 
 ## Basic Guides
 
+* [Basic Guides - Overview](basic-guides/basic-guides-overview.md)
 * [Port Forwarding & Dynamic DNS](basic-guides/port-forwarding-and-dynamic-dns.md)
 * [Preventing macOS from Sleeping](basic-guides/preventing-macos-from-sleeping.md)
+* [Migrating Servers](basic-guides/migrating-servers.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
+* [Advanced Guides - Overview](advanced/advanced-guides-overview.md)
 * [Multiple Users on the Same Mac](advanced/multiple-users-on-the-same-mac.md)
 * [Disabling SIP on Unofficial Macs for the Private API](advanced/disabling-sip-on-unofficial-macs-for-the-private-api.md)
 * [macOS Virtualization](advanced/macos-virtualization/README.md)
@@ -42,5 +45,8 @@
 
 ## Developer Guides
 
+* [Developer Guides - Overview](developer-guides/developer-guides-overview.md)
 * [Build Yourself / Contribution Guide](developer-guides/build-yourself-contribution-guide.md)
 * [REST API & Webhooks](developer-guides/rest-api-and-webhooks.md)
+* [Simple Web Server for Webhooks](developer-guides/simple-web-server-for-webhooks/README.md)
+  * [Python Web Server Example](developer-guides/simple-web-server-for-webhooks/python-web-server.md)

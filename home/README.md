@@ -14,6 +14,12 @@ Make sure to check out our Discord linked in the header for any questions not co
 
 {% embed url="https://docs.bluebubbles.app/server" %}
 
+{% embed url="https://docs.bluebubbles.app/server/basic-guides/basic-guides-overview" %}
+
+{% embed url="https://docs.bluebubbles.app/server/advanced/advanced-guides-overview" %}
+
+{% embed url="https://docs.bluebubbles.app/server/developer-guides/developer-guides-overview" %}
+
 ### Client Documentation (Android, Web, & Desktop)
 
 {% embed url="https://docs.bluebubbles.app/client" %}
