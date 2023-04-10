@@ -11,35 +11,37 @@ Requirements
 - Open the [**Access controls**](https://login.tailscale.com/admin/acls) page in the admin console and click the **Add Funnel to policy** button
 ---
 1. Download Tailscale from the [Mac App Store](https://apps.apple.com/ca/app/tailscale/id1475387142) or [directly from Tailscale](https://pkgs.tailscale.com/stable/#macos) 
+
 2. Login from the top right menu icon & enable start on login from prefrences
+
 3. Add alias for the Tailscale CLI to your shell configuration by entering  the command below into terminal.
 ```bash
 echo 'alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"' | sudo tee -a ~/.zshrc
 ```
 Alternatively, you can use `/Applications/Tailscale.app/Contents/MacOS/Tailscale <command>` 
 
-3. Proxy requests to BlueBubbles's local web server on port 1234.
+4. Proxy requests to BlueBubbles's local web server on the default port 1234. Make sure to check your setup in case a different port is being used.
 
 ```bash
 tailscale serve https / http://127.0.0.1:1234
 ```
 
-4. Enable the funnel to route proxy traffic over Tailscale funnel servers. Supported ports are 443, 8443, or 10000.
+5. Enable the funnel to route proxy traffic over Tailscale funnel servers. Supported ports are 443, 8443, or 10000.
 
 ```bash
 tailscale funnel 443 on
 ```
 
-5. Check the funnel status with:
+6. Check the funnel status with:
 
 ```bash
 tailscale serve status 
 ```
 
-6. Finally, add the domain from step 5 to the BlueBubbles Proxy Service drop-down menu:
+7. Finally, add the domain from step 5 to the BlueBubbles Proxy Service drop-down menu:
 
 ```bash
-<https://machine-name.example.ts.net:443/>
+https://machine-name.example.ts.net:443/
 ```
 
 ---
