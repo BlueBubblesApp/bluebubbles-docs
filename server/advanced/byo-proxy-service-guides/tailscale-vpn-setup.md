@@ -1,19 +1,22 @@
-# Tailscale Funnel 
-**Requirements**
+# Tailscale Funnel
 
+Tailscale is a mesh VPN software that uses WireGuard technology. It also include other fun features like Tailscale Funnel.
+
+[Tailscale Funnel ](https://tailscale.com/kb/1223/tailscale-funnel/) allows you to publicly expose your machine's local services without needing to purchase a domain & set up port forwarding. It hosts your machine's domain on their Funnel Servers. The Funnel Server accepts requests & sends a TCP proxy to your machine where TLS cert is terminated. Simple, secure & only requires a few short commands.
+
+--- 
+Requirements
+- [Tailscale account](https://login.tailscale.com/start)
 - Enable [HTTPS certificates](https://login.tailscale.com/admin/dns) in the [admin console](https://login.tailscale.com/admin/dns).
-- [Add Funnel to Policy](https://login.tailscale.com/admin/acls) in the admin console.
-
+- Open the [**Access controls**](https://login.tailscale.com/admin/acls) page in the admin console and click the **Add Funnel to policy** button
 ---
-
-## macOS 
-
-1. Download Tailscale from the [Mac App Store](https://apps.apple.com/ca/app/tailscale/id1475387142) or [directly from Tailscale](https://pkgs.tailscale.com/stable/#macos). Install and log in.
-2. Add an alias for the Tailscale CLI to your shell configuration for convenience. Alternatively, you can use `/Applications/Tailscale.app/Contents/MacOS/Tailscale <command>`.
-
+1. Download Tailscale from the [Mac App Store](https://apps.apple.com/ca/app/tailscale/id1475387142) or [directly from Tailscale](https://pkgs.tailscale.com/stable/#macos) 
+2. Login from the top right menu icon & enable start on login from prefrences
+3. Add alias for the Tailscale CLI to your shell configuration by entering  the command below into terminal.
 ```bash
 echo 'alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"' | sudo tee -a ~/.zshrc
 ```
+Alternatively, you can use `/Applications/Tailscale.app/Contents/MacOS/Tailscale <command>` 
 
 3. Proxy requests to BlueBubbles's local web server on port 1234.
 
@@ -30,7 +33,7 @@ tailscale funnel 443 on
 5. Check the funnel status with:
 
 ```bash
-tailscale serve status
+tailscale serve status 
 ```
 
 6. Finally, add the domain from step 5 to the BlueBubbles Proxy Service drop-down menu:
@@ -38,10 +41,6 @@ tailscale serve status
 ```bash
 <https://machine-name.example.ts.net:443/>
 ```
---- 
-## Run on Host System |  macOS virutal machine
-
-To improve network bandwidth and overall connection, it may be beneficial to run Tailscale Funnel on the host system while using macOS in a virtual environment. To accomplish this, you will need to forward the local port of BlueBubbles running on macOS to the host system and then utilize Tailscale Funnel on the host to handle requests to the BlueBubbles local web server
 
 ---
 - [Tailscale Funnel CLI](https://tailscale.com/kb/1080/cli/#serve)
@@ -49,3 +48,5 @@ To improve network bandwidth and overall connection, it may be beneficial to run
 - [Access Control Lists (ACLs)](https://tailscale.com/kb/1018/acls/)
 - [Download](https://www.notion.so/Download-Tailscale-client-for-macOS-81a4c0a03d5942de91096a98759d7349)
 - [Introduction to Tailscale funnel](https://tailscale.com/blog/introducing-tailscale-funnel/)
+
+Thanks to @bobspop in Discord for creating this guide.
