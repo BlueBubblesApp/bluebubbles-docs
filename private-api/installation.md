@@ -91,6 +91,7 @@ Please follow the instructions for your macOS version in the tabs below.
       1. Open the `MacForge App`, then drag and drop the `.bundle` file into the `Manage Plug-ins` page/tab.
       2. This will automatically install this helper plugin. To verify, you may check under the `/Library/Application Support/MacEnhance/Plugins/` directory, where you should see `BlueBubblesHelper.bundle`
       3. Confirm that the BlueBubblesHelper plugin is toggled to `library`, and not `user`, within MacForge (the icon should show 2 people, not 1 person)
+      4. If you cannot drag and drop, visit the`/Library/Application Support/MacEnhance/Plugins/` directory in Finder and paste the `BlueBubblesHelper.bundle` into it
     * **If you installed** _**mySIMBL**_
       1. Open the `mySIMBL App`, then go to the `Manage` tab
       2. Click the `+` button and select the `BlueBubblesHelper.bundle`
