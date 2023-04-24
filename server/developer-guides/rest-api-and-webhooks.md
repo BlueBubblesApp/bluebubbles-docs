@@ -18,6 +18,14 @@ Webhooks require server version 1.0.0 or greater.
 
 * [https://git.elliotnash.org/elliotnash/blueify](https://git.elliotnash.org/elliotnash/blueify) (Java)
 
+## Who's Using It?
+
+{% embed url="https://www.textgpt.chat/" %}
+ChatGPT Bot for iMessage (Paid | Closed Source)
+{% endembed %}
+
+If you've built something using the API or webhooks that you'd like to share, let us know on our Discord!
+
 ## API Documentation
 
 {% embed url="https://documenter.getpostman.com/view/765844/UV5RnfwM" %}
