@@ -82,7 +82,7 @@ NOTE: If using Podman as a non-root user, the additional flag `--network slirp4n
 
 &#x20; 8\.  Once you're on your desktop, test sending an iMessage to yourself. If it does not succeed, it's likely best to restart from the beginning, though our Discord community may be able to help.
 
-&#x20; ****  9. **Before shutting down your VM**, run this in a new terminal with the same user:
+&#x20; 9\. **Before shutting down your VM**, run this in a new terminal with the same user:
 
 ```bash
 docker cp bluebubbles-setup:/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2 ./bootdisk.qcow2

@@ -1,7 +1,9 @@
 # Table of contents
 
-* [Installation Overview](README.md)
-* [Server Installation](https://bluebubbles.app/install)
+* [Server Overview](README.md)
+* [Installation Guides](installation-guides/README.md)
+  * [Standard Installation](https://bluebubbles.app/install)
+  * [Manual Setup](installation-guides/manual-setup.md)
 * [FAQ](https://bluebubbles.app/faq)
 * [Private API Setup](https://docs.bluebubbles.app/helper-bundle/installation)
 * [Supporting the Project](supporting-the-project.md)

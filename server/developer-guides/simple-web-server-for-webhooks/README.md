@@ -26,7 +26,7 @@ Once you've built your HTTP server, note the port that the server runs on (if ru
 
 Open up the BlueBubbles Server and open the `API & Webhooks` page. Then click on the `Manage` drop down, and select `Add Webhook`
 
-``![](<../../.gitbook/assets/CleanShot 2023-03-17 at 10.01.02.png>)``
+![](<../../.gitbook/assets/CleanShot 2023-03-17 at 10.01.02.png>)
 
 In the popup, enter your webserver's URL + port (if on localhost). Here is an example where my localhost webserver is listening on port 8000:
 
