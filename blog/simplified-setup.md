@@ -1,6 +1,6 @@
 ---
 description: Our new setup process makes BlueBubbles even more accessible for users
-cover: .gitbook/assets/Banner.png
+cover: .gitbook/assets/Banner (1).png
 coverY: 0
 layout: editorial
 ---
