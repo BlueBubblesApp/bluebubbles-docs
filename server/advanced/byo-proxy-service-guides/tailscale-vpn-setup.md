@@ -46,9 +46,9 @@ https://machine-name.example.ts.net:443/
 
 ---
 - [Tailscale Funnel CLI](https://tailscale.com/kb/1080/cli/#serve)
-- [Tailscale Funnel Documentation](https://www.notion.so/Tailscale-Funnel-1ac25b9e1c5d41fda353cdd1e30e032b)
+- [Tailscale Funnel Documentation](https://tailscale.com/kb/1223/tailscale-funnel/)
 - [Access Control Lists (ACLs)](https://tailscale.com/kb/1018/acls/)
-- [Download](https://www.notion.so/Download-Tailscale-client-for-macOS-81a4c0a03d5942de91096a98759d7349)
+- [Download](https://tailscale.com/download/mac)
 - [Introduction to Tailscale funnel](https://tailscale.com/blog/introducing-tailscale-funnel/)
 
 Thanks to @bobspop in Discord for creating this guide.
