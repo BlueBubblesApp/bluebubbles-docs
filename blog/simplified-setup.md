@@ -25,6 +25,16 @@ If you're not interested in providing your Google account, don't worry, we still
 
 That's not all though, we've got a few other notable features making it to this release.
 
+### Server-Managed Private API Injection
+
+This server update is trialing a new Private API helper injection method, using a dynamic library (dylib). This is an opt-in method, but we highly recommend trying it out if you have issues with Private API connection after a reboot / server update or just issues with Macforge in general. You can opt-in using the dropdown on the server settings page.
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+This injection method works by starting an instance of the Messages app on the Mac with the [`DYLD_INSERT_LIBRARIES`](https://blog.timac.org/2012/1218-simple-code-injection-using-dyld\_insert\_libraries/) environment variable pointed at the dylib file. The main benefit of this system is that the server can fully manage the Private API lifecycle - we inject the bundle, we monitor the status of the iMessage app, and we have the ability to restart iMessage if any problems or crashes are detected - which should ensure better reliability and uptime. It also makes the setup process easier and eliminates any confusion regarding Macforge between Intel or Apple Silicon Macs.
+
+If the test goes well, we will likely remove support for Macforge entirely in a future update, in favor of having the server manage the entire Private API stack. Give the dylib a shot and let us know how it works!
+
 ### CLI Arguments
 
 The server now accepts command line arguments! This allows you to change the server's setup on the fly - you can set _any_ server setting, and these will persist through subsequent launches of the app.
@@ -53,7 +63,7 @@ Besides these notable features, there's a handful of smaller things and bug fixe
 
 Yet again, the shining star of the client update is also Google sign in! You no longer have to deal with changing QR codes and URLs. Just log in with your Google account, and the app will find your server for you. Enter your server's password, and voila, you're connected.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Like the server, the client uses the "puppet" Google Cloud Project to read your Firebase projects. We filter out any projects that aren't BlueBubbles related, and show you a list of any projects that have a stored server URL. This is awesome because the client app can find your server even if you made your Firebase project manually! There's no need to have an auto-generated Firebase project.
 
