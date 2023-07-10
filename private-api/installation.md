@@ -64,9 +64,8 @@ Please follow the instructions for your macOS version in the tabs below.
 
 {% tabs %}
 {% tab title="macOS 10.13-10.15 (Sierra-Catalina)" %}
-
 1. Open Terminal on your macOS device
-2. Run the following command to disable Library Validation and enter your password when prompted.
+2.  Run the following command to disable Library Validation and enter your password when prompted.
 
     `sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true`
 3. Run the following commands to force your Mac to reboot into recovery mode:
@@ -75,7 +74,7 @@ Please follow the instructions for your macOS version in the tabs below.
      1. **WARNING**: This will instantly reboot your Mac. Save everything before executing this command!
      2. `sudo nvram recovery-boot-mode=unused`
      3. `sudo reboot recovery`
-   * **If you are using** _**a Virtual Machine or a patched macOS software**_, follow [this guide.](https://docs.bluebubbles.app/server/advanced/running-on-macos-vm/disable-sip-on-vms)
+   * **If you are using** _**a Virtual Machine or a patched macOS software (Open Core)**_, follow [this guide.](https://docs.bluebubbles.app/server/advanced/running-on-macos-vm/disable-sip-on-vms)
 4. When you are booted into `Recovery Mode`:
    * Click on `Utilities` in the top menu bar
    * Select `Terminal`
@@ -104,9 +103,8 @@ Please follow the instructions for your macOS version in the tabs below.
 {% endtab %}
 
 {% tab title="macOS 11+ (Big Sur+)" %}
-
 1. Open Terminal on your macOS device
-2. Run the following command to disable Library Validation and enter your password when prompted.
+2.  Run the following command to disable Library Validation and enter your password when prompted.
 
     `sudo defaults write /Library/Preferences/com.apple.security.libraryvalidation.plist DisableLibraryValidation -bool true`
 3. Follow the instructions below for your device type
@@ -152,19 +150,19 @@ Please follow the instructions for your macOS version in the tabs below.
 
 Here are some basic troubleshooting steps. Please try these out, and if you need more help, feel free to join our [Discord](https://discord.gg/BdsGwREh)!
 
-* Make sure you have the latest bundle and server versions from their respective GitHub releases page, and that you downloaded the correct bundle for your macOS version.&#x20;
+* Make sure you have the latest bundle and server versions from their respective GitHub releases page, and that you downloaded the correct bundle for your macOS version.
 * Make sure you have the Private API switch turned on in _**both**_ the server and the client app
 * Try force quitting and reopening the server (with private API switch toggled on), and then force quit and reopen the iMessage app
 * Make sure your bundle is toggled to "library" mode in MacForge / mySIMBL (the icon next to it should have 2 people, not 1 person)
 * If you are on Apple Silicon, make sure you have Beta MacForge and that the BlueBubblesHelper bundle has a green dot for Apple Silicon.
-* Check the MacForge / mySIMBL system tab. It should show these values on Intel:
+*   Check the MacForge / mySIMBL system tab. It should show these values on Intel:
 
     ![Selected](.gitbook/assets/image.png)
 
     or it should show all green dots on Apple Silicon.
 
-  * If you see Library Validation enabled, try step 2 of the [#instructions](installation.md#instructions "mention") again.
-  * If you see System Integrity Protection enabled, run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
-  * If any of the checkboxes are not checked, make sure you are running MacForge inside an Administrator account with all privileges.
+    * If you see Library Validation enabled, try step 2 of the [#instructions](installation.md#instructions "mention") again.
+    * If you see System Integrity Protection enabled, run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
+    * If any of the checkboxes are not checked, make sure you are running MacForge inside an Administrator account with all privileges.
 
 If none of this works, you should join our Discord and the developers will be able to help you out. In your post, please include your macOS version, Mac chipset (Intel / Apple Silicon), your bundle version, your server version, and a picture of the MacForge / mySIMBL system. Thanks!
