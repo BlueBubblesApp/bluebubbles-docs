@@ -6,11 +6,7 @@ description: Set up BlueBubbles without signing into your Google account
 
 ## Server Installation
 
-On the macOS device you'd like to use for the server, open the link below. Scroll to the bottom and download the .dmg file.
-
-{% embed url="https://github.com/BlueBubblesApp/bluebubbles-server/releases/latest" %}
-BlueBubbles Server Download
-{% endembed %}
+On the macOS device you'd like to use for the server, open the [server GitHub](https://github.com/BlueBubblesApp/bluebubbles-server/releases/latest). Scroll to the bottom and download the .dmg file.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-05-02 at 12.46.24 PM (1).png" alt=""><figcaption><p>Download the .dmg file in the Assets list</p></figcaption></figure>
 
@@ -27,10 +23,6 @@ Once full disk access is enabled, proceed to the **Notifications** step. Switch 
 **On your Mac**, open the [Firebase Console](https://console.firebase.google.com/) and login with your Google account. Create a Firebase account and generate `google_services.json` and `firebase-adminsdk.json` by following the below video or written tutorial.
 
 {% tabs %}
-{% tab title="Video Guide" %}
-
-{% endtab %}
-
 {% tab title="Written Guide" %}
 1. Click **Create a Project** and enter **BlueBubblesApp** as the name. Disable Google Analytics (why do you want Google spying on you?) and wait for the project to be created.
 2. In the tabs on the far left, click **Build** > **Firestore Database.**
@@ -43,6 +35,10 @@ Once full disk access is enabled, proceed to the **Notifications** step. Switch 
 9. Next, navigate to the **General** tab.
 10. Scroll to the bottom of the page and click the Android icon to add an Android app. Set the package name to `com.bluebubbles.messaging` and leave the other fields blank.
 11. Click **Register app**, then **Download google\_services.json**. **This will download file 2 / 2 needed for the manual setup.**
+{% endtab %}
+
+{% tab title="Video Guide" %}
+{% embed url="https://bluebubbles.app/install/manual-setup.mp4" %}
 {% endtab %}
 {% endtabs %}
 
