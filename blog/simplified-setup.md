@@ -21,7 +21,7 @@ Under the hood, the server uses a "puppet" Google Cloud Project that we created 
 
 Huge thanks to [@probablypablito](https://github.com/probablypablito) for doing the initial research and a proof-of-concept implementation.
 
-If you're not interested in providing your Google account, don't worry, we still support doing the Firebase configuration manually! Please see our updated guide at \<TODO>. We will continue to support manual Firebase configurations in the future, and there will not be any iMessage-parity related differences between Google and Manual setups.
+If you're not interested in providing your Google account, don't worry, we still support doing the Firebase configuration manually! Please see our [updated guide](https://docs.bluebubbles.app/server/installation-guides/manual-setup) if you choose to go this route. We will continue to support manual Firebase configurations in the future, and there will not be any iMessage-parity related differences between Google and Manual setups.
 
 That's not all though, we've got a few other notable features making it to this release.
 
