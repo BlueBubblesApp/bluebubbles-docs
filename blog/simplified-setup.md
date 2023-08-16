@@ -58,6 +58,8 @@ Besides these notable features, there's a handful of smaller things and bug fixe
 * Fixed issues with handling attachments over 200mb
 * Fixed a few issues when handling live photos
 * Fixed issues surrounding Dynamic DNS URLs
+* Fixed issue causing chat creation to fail with an improperly formatted phone number
+* Improved UI & UX of several areas
 
 ## Client Update v1.12.3
 
@@ -75,24 +77,21 @@ We're super excited for this feature because it makes it easy to launch BlueBubb
 * FindMy page now supports showing your location in realtime, as well as providing an indicator of the direction you're facing. We hope this makes it easier to locate your position relative to your devices.
 * The Android and Desktop apps will now respond to an `imessage://` deep link, so you can quickly start an iMessage chat with someone from a website using them.
 * iOS 16.4 Emojis
+* Generate a theme pallette from an image
 
 ## Full Changelog
 
 You can view the full changelogs on Github:
 
-{% embed url="https://github.com/BlueBubblesApp/bluebubbles-server/releases/tag/v1.8.0" %}
-Server
-{% endembed %}
+[Server Changelog](https://github.com/BlueBubblesApp/bluebubbles-server/releases/tag/v1.8.0)
 
-{% embed url="https://github.com/BlueBubblesApp/bluebubbles-app/releases/tag/v1.12.2" fullWidth="false" %}
-Client
-{% endembed %}
+[Client Changelog](https://github.com/BlueBubblesApp/bluebubbles-app/releases/tag/v1.12.3%2B57)
 
 ## Get the Update
 
 You can download the server update immediately from [GitHub](https://github.com/BlueBubblesApp/bluebubbles-server/releases/tag/v1.8.0).
 
-You can download the client update immediately from [GitHub](https://github.com/BlueBubblesApp/bluebubbles-app/releases), or it should be available within the next 24 hours in the [Play Store](https://play.google.com/store/apps/details?id=com.bluebubbles.messaging\&hl=en\_US\&gl=US) or Microsoft Store.
+You can download the client update immediately from [GitHub](https://github.com/BlueBubblesApp/bluebubbles-app/releases/tag/v1.12.3%2B57), or it should be available within the next 24 hours in the [Play Store](https://play.google.com/store/apps/details?id=com.bluebubbles.messaging\&hl=en\_US\&gl=US) or Microsoft Store.
 
 ## Support Us
 
