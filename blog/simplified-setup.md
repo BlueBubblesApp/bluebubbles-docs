@@ -27,13 +27,11 @@ That's not all though, we've got a few other notable features making it to this 
 
 ### Server-Managed Private API Injection
 
-This server update is trialing a new Private API helper injection method, using a dynamic library (dylib). This is an opt-in method, but we highly recommend trying it out if you have issues with Private API connection after a reboot / server update or just issues with Macforge in general. You can opt-in using the dropdown on the server settings page.
+This server update gets rid of the MacForge dependency entirely! Gone are the days of installing the wrong version on your Apple Silicon Mac, or making sure MacForge was running the bundle in the correct user-mode. Now, the BlueBubbles Server will inject the Private API helper (dylib; Dynamic Library) directly into the Messages app. Letting the server manage the Private API and Messages process has proven to be more stable for nearly everyone who tried. It also allows us to handle and log errors properly, making it easier to debug issues that may arise.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>(Edit: The Private API Mode option is no longer available. MacForge is no longer required.)</p></figcaption></figure>
 
 This injection method works by starting an instance of the Messages app on the Mac with the [`DYLD_INSERT_LIBRARIES`](https://blog.timac.org/2012/1218-simple-code-injection-using-dyld\_insert\_libraries/) environment variable pointed at the dylib file. The main benefit of this system is that the server can fully manage the Private API lifecycle - we inject the bundle, we monitor the status of the iMessage app, and we have the ability to restart iMessage if any problems or crashes are detected - which should ensure better reliability and uptime. It also makes the setup process easier and eliminates any confusion regarding Macforge between Intel or Apple Silicon Macs.
-
-If the test goes well, we will likely remove support for Macforge entirely in a future update, in favor of having the server manage the entire Private API stack. Give the dylib a shot and let us know how it works!
 
 ### CLI Arguments
 
