@@ -17,17 +17,10 @@ This guide is tailored towards the Android Studio IDE. You can also build in VSC
 ### Initial Steps
 
 1. Clone the repository to your system
-2. You will notice under the "Dart Analysis" tab at the bottom of the window that there are some errors related to `content commit`. Click on each of these errors and comment them out using `//` at the beginning of those lines.&#x20;
-   * `onContentCommitted: onContentCommit,` should become `//onContentCommitted: onContentCommit,`
-   * `final ValueChanged<CommittedContent>? onContentCommitted` should become `//final ValueChanged<CommittedContent>? onContentCommitted`
-   * You will also see one function with content commit, that looks like this: `onContentCommit(CommittedContent content) async {...}`. Change it to say `onContentCommit(dynamic content) async {...}`.
-3. Add a blank file named `.env` to the root of the project directory. This is to prevent a build error.
+   1. We recommend building off the `development` branch! It has the more recent code that is more likely to build without errors.
+2. Add a blank file named `.env` to the root of the project directory. This is to prevent a build error.
 
 ### Android
-
-{% hint style="warning" %}
-Building yourself will cause you to lose the ability to insert GIFs from your keyboard! The reason for this is that we use an entirely custom Flutter Engine and Flutter SDK, which is quite the hassle to set up, and can only be used on Linux.
-{% endhint %}
 
 1. Find `android > app > build.gradle` (not to be confused with `android > build.gradle`), and scroll down to `signingConfig signingConfigs.release` at line 111. Change this to `signingConfig signingConfigs.debug`.
 2. In a terminal window at the root of the project directory, run `flutter build apk --release --flavor prod`
@@ -45,13 +38,11 @@ Building yourself will cause you to lose the ability to insert GIFs from your ke
 
 1. Install NuGet package manager
 2. Go to Visual Studio Installer -> Modify Build Tools -> Individual Components and install the latest Windows 10 SDK
-3. Run the following commands:
+3.  Run the following commands:
 
     ```cmd
-    <stash content commit changes>
     flutter clean
     git reset
-    <unstash content commit changes>
     flutter build windows
     ```
 
@@ -77,7 +68,7 @@ Make sure you've completed [#pre-requisites](build-yourself-contribution-guide.m
 4. Make your changes
 5. Run the app using `flutter run` or the green play button at the top of your IDE
 6. Test your changes
-7. Commit and PR!
+7.  Commit and PR!
 
     Make sure you don't commit your changes to comment out `onContentCommit`.
 
