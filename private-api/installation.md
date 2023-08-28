@@ -1,11 +1,11 @@
 ---
-description: How to install the Private API helper bundle
+description: How to configure your server to enable the Private API
 ---
 
 # Installation
 
 {% hint style="info" %}
-In order to get Private API features, you must disable MacOS extra security measures, called System Integrity Protection (SIP). The reason for this is because Apple does not let us access the internal iMessage code to do things like send reactions if SIP is enabled. When disabled, we can use an app called MacForge to unlock access to these private APIs. In a way, installing MacForge is similar to Jailbreaking your iPhone and installing Cydia.
+In order to get Private API features, you must disable MacOS extra security measures, called System Integrity Protection (SIP). The reason for this is because Apple does not let us access the internal iMessage code to do things like send reactions if SIP is enabled. When disabled, we can inject a helper process into the iMessage app to call the internal functions for us. In a way, disabling SIP is similar to Jailbreaking your iPhone.
 {% endhint %}
 
 {% hint style="info" %}
@@ -13,7 +13,7 @@ Disabling SIP can be challenging, we recommend joining our [Discord](https://dis
 {% endhint %}
 
 {% hint style="danger" %}
-Disable SIP at your own risk! We are not responsible for any damages, issues, or glitches caused by disabling SIP or by using MacForge/mySIMBL.
+Disable SIP at your own risk! We are not responsible for any damages, issues, or glitches caused by disabling SIP or by using the Private API.
 
 If you use common sense when downloading and installing things, you should be just fine. Please be careful!
 {% endhint %}
@@ -40,24 +40,6 @@ The Helper Bundle currently supports macOS 10.13 and up, on both Intel and Apple
 It may support lower macOS versions, but we haven't been able to test them yet.
 {% endhint %}
 
-## Required Software
-
-{% tabs %}
-{% tab title="macOS 10.13 and under" %}
-[mySIMBL](https://github.com/w0lfschild/mySIMBL/releases)
-{% endtab %}
-
-{% tab title="macOS 10.14+ (INTEL)" %}
-[MacForge](https://www.macenhance.com/macforge)
-{% endtab %}
-
-{% tab title="macOS 11+ (APPLE SILICON)" %}
-**Macforge Beta should only be used on Apple Silicon!! i.e. M1 / M1 Pro / M1 Max / M1 Ultra / M2 / etc (Macs released after late 2020)! All other CPUs and Virtual Machines should use 10.14+ (INTEL).**\
-\
-[MacForge Beta](https://github.com/MacEnhance/appcast/raw/master/Beta/MacForge/MacForge.1.2.0B1.zip)
-{% endtab %}
-{% endtabs %}
-
 ## Instructions
 
 Please follow the instructions for your macOS version in the tabs below.
@@ -81,25 +63,9 @@ Please follow the instructions for your macOS version in the tabs below.
    * Type this command and hit enter to disable SIP: `csrutil disable`
 5. Restart your macOS device/server
    * Click the Apple logo in the top menu, then click `Restart`
-6. Download MacForge or mySIMBL from their official site (depending on your macOS version; links above)
-7. Unzip and install the MacForge/mySIMBL app (copy the app to your `Applications` folder as instructed)
-8. Download the latest [BlueBubbles Helper Bundle](https://github.com/BlueBubblesApp/BlueBubbles-Server-Helper/releases) for MacForge/MySIMBL (please pay attention to macOS version on the .zip file)
-9. If you have not already, unzip the ZIP file containing the `BlueBubblesHelper.bundle`
-10. Follow the instructions below for either MacForge or mySIMBL
-    * **If you installed** _**MacForge**_
-      1. Open the `MacForge App`, then drag and drop the `.bundle` file into the `Manage Plug-ins` page/tab.
-      2. This will automatically install this helper plugin. To verify, you may check under the `/Library/Application Support/MacEnhance/Plugins/` directory, where you should see `BlueBubblesHelper.bundle`
-      3. Confirm that the BlueBubblesHelper plugin is toggled to `library`, and not `user`, within MacForge (the icon should show 2 people, not 1 person)
-      4. If you cannot drag and drop, visit the`/Library/Application Support/MacEnhance/Plugins/` directory in Finder and paste the `BlueBubblesHelper.bundle` into it
-    * **If you installed** _**mySIMBL**_
-      1. Open the `mySIMBL App`, then go to the `Manage` tab
-      2. Click the `+` button and select the `BlueBubblesHelper.bundle`
-      3. Verify that the bundle is enabled and running
-11. Turn the Private API switch on in the BlueBubbles Server settings
-12. Restart / start the BlueBubbles MacOS Server, and restart iMessage for good measure
-13. Verify that the `BlueBubblesHelper` is detected and links to the `macOS Server App`:
-    * Navigate to the debug tab, and make sure a `Helper Connected` log shows
-14. Go to Settings > Private API Features on the clients you use, and toggle that on. You should now have functioning Private API Features!
+6. Turn the Private API switch on in the BlueBubbles Server settings
+7. Verify that the Private API is connected by clicking the refresh button inside the **Private API Status** box in BlueBubbles Server settings
+8. Go to Settings > Private API Features on the clients you use, and toggle that on. You should now have functioning Private API Features!
 {% endtab %}
 
 {% tab title="macOS 11+ (Big Sur+)" %}
@@ -130,19 +96,9 @@ Please follow the instructions for your macOS version in the tabs below.
      3. Click the Apple logo in the top menu bar, then click `Restart`
    * _**macOS on a Virtual Machine or patched macOS software on a Physical Mac**_
      1. Follow [this guide.](https://docs.bluebubbles.app/server/advanced/running-on-macos-vm/disable-sip-on-vms)
-4. Download MacForge (link above)
-5. Unzip and install the MacForge app (copy the app to your `Applications` folder as instructed)
-6. Download the latest [BlueBubbles Helper Bundle](https://github.com/BlueBubblesApp/BlueBubbles-Server-Helper/releases) for MacForge (please pay attention to macOS version on the .zip file)
-7. If you have not already, unzip the ZIP file containing the `BlueBubblesHelper.bundle`
-8. Open the `MacForge App`, then drag and drop the `.bundle` file into the `Manage Plug-ins` page/tab.
-   * This will automatically install this helper plugin. To verify, you may check under the `/Library/Application Support/MacEnhance/Plugins/` directory, where you should see `BlueBubblesHelper.bundle`
-   * Confirm that the BlueBubblesHelper plugin is toggled to `library`, and not `user`, within MacForge (the icon should show 2 people, not 1 person)
-   * If you cannot drag and drop, visit the`/Library/Application Support/MacEnhance/Plugins/` directory in Finder and paste the `BlueBubblesHelper.bundle` into it
-9. Turn the Private API switch on inside the BlueBubbles Server settings
-10. Restart / start the BlueBubbles MacOS Server, and restart iMessage for good measure
-11. Verify that the `BlueBubblesHelper` is detected and links to the `macOS Server App`:
-    * Navigate to the debug tab, and make sure a `Private API Helper Connected` log shows
-12. Go to Settings > Private API Features on the clients you use, and toggle that on. You should now have functioning Private API Features!
+4. Turn the Private API switch on inside the BlueBubbles Server settings
+5. Verify that the Private API is connected by clicking the refresh button inside the **Private API Status** box in BlueBubbles Server settings
+6. Go to Settings > Private API Features on the clients you use, and toggle that on. You should now have functioning Private API Features!
 {% endtab %}
 {% endtabs %}
 
@@ -150,19 +106,8 @@ Please follow the instructions for your macOS version in the tabs below.
 
 Here are some basic troubleshooting steps. Please try these out, and if you need more help, feel free to join our [Discord](https://discord.gg/BdsGwREh)!
 
-* Make sure you have the latest bundle and server versions from their respective GitHub releases page, and that you downloaded the correct bundle for your macOS version.
 * Make sure you have the Private API switch turned on in _**both**_ the server and the client app
-* Try force quitting and reopening the server (with private API switch toggled on), and then force quit and reopen the iMessage app
-* Make sure your bundle is toggled to "library" mode in MacForge / mySIMBL (the icon next to it should have 2 people, not 1 person)
-* If you are on Apple Silicon, make sure you have Beta MacForge and that the BlueBubblesHelper bundle has a green dot for Apple Silicon.
-*   Check the MacForge / mySIMBL system tab. It should show these values on Intel:
+* Try force quitting and reopening the server (with private API switch toggled on)
+* Run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
 
-    ![Selected](.gitbook/assets/image.png)
-
-    or it should show all green dots on Apple Silicon.
-
-    * If you see Library Validation enabled, try step 2 of the [#instructions](installation.md#instructions "mention") again.
-    * If you see System Integrity Protection enabled, run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
-    * If any of the checkboxes are not checked, make sure you are running MacForge inside an Administrator account with all privileges.
-
-If none of this works, you should join our Discord and the developers will be able to help you out. In your post, please include your macOS version, Mac chipset (Intel / Apple Silicon), your bundle version, your server version, and a picture of the MacForge / mySIMBL system. Thanks!
+If none of this works, you should join our Discord and the developers will be able to help you out. In your post, please include your macOS version, Mac chipset (Intel / Apple Silicon), and your server version. Thanks!
