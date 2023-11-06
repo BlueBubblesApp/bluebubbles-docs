@@ -63,7 +63,7 @@ If these fail, you can switch to Ngrok using the Proxy Service dropdown from the
 Proceed to the **Private API** step.
 
 {% hint style="warning" %}
-The Private API setup (along with its requirements) is optional! If you would like to immediately set up the Private API, please follow [our guide](http://localhost:5000/s/6lvvV3iI77HlBq7B3en4/installation).
+The Private API setup (along with its requirements) is optional! If you would like to immediately set up the Private API, please follow [our guide](https://docs.bluebubbles.app/private-api/installation).
 
 Do not enable the Private API checkbox unless your requirements are passing and you have completed the setup.
 {% endhint %}
