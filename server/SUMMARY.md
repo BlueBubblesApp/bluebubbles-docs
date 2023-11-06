@@ -37,7 +37,6 @@
       * [Catalina VM on Intel / AMD Windows](https://youtu.be/yuwjUv8-uGE)
       * [Catalina VM on Intel Windows](https://www.reddit.com/r/BlueBubbles/comments/m40152/vmware\_guide\_how\_to\_set\_up\_a\_mac\_vm\_in\_vmware/)
       * [Monterey VM on AMD Windows](https://lauri-elias.medium.com/macos-monterey-on-ryzen-windows-vmware-16-2ebe377d90b3)
-  * [Running macOS in Docker](advanced/macos-virtualization/running-macos-in-docker.md)
   * [Running BlueBubbles in Docker-OSX](advanced/macos-virtualization/running-bluebubbles-in-docker-osx/README.md)
     * [Configuring BlueBubbles as a Service](advanced/macos-virtualization/running-bluebubbles-in-docker-osx/configuring-bluebubbles-as-a-service.md)
 * [BYO Proxy Service Guides](advanced/byo-proxy-service-guides/README.md)
