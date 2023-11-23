@@ -50,7 +50,6 @@ qemu-img create -f qcow2 maindisk.qcow2 128G
 ```bash
 docker run \
   --rm \
-  --rmi \
   --name bluebubbles-setup \
   --dns=1.1.1.1 \
   --device /dev/kvm \
@@ -70,6 +69,7 @@ This will take a while because it's downloading the image for Docker-OSX and gen
 
 You may see a handful of errors particularly related to ALSA. These can be safely ignored.
 
+NOTE: If using Podman, you can add `--rmi` to also remove the image after setup. However, this flag can be annoying if you need to start/stop this step repeatedly to troubleshoot because it will re-download the image every time
 NOTE: If using Podman as a non-root user, the additional flag `--network slirp4netns:port_handler=slirp4netns` must be added. &#x20;
 
 &#x20;4\.  With your vnc viewer, open a connection to your IP on port 5999. If you're using tigervnc and running this on the same phost, you can use `vncviewer localhost:5999`. The password will be `vncpass` unless you changed it in the command.
@@ -77,6 +77,8 @@ NOTE: If using Podman as a non-root user, the additional flag `--network slirp4n
 &#x20; 5\.  If presented with a boot loader (a black screen with some icons in the center), select the option `MacOS Base System` to boot into the recover/install menu.
 
 &#x20; 6\.  Before installing, you have to format the drive with APFS for a macOS install. Go into Disk Utility and find your drive. Click "Erase". Fill in the name for the drive that you want, then leave the rest as defaults and click "Erase". Close out of Disk Utility.
+
+NOTE: On Ventura, you may have to use "MacOS extended (Journaled)" instead of APFS. See [this GitHub issue](https://github.com/sickcodes/Docker-OSX/issues/511#issuecomment-1465009278) for more information.
 
 &#x20; 7\.  Click on "reinstall macOS" and install macOS as normal.
 
