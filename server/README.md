@@ -2,7 +2,7 @@
 description: Info on the BlueBubbles server app
 ---
 
-# Intro and Background
+# Server Overview
 
 ## Background
 
@@ -12,7 +12,11 @@ The server uses AppleScript to perform simple functions like sending messages & 
 
 ## Supported Mac Devices
 
-Any macOS device running El Capitan and higher, with iMessage activated successfully.
+Any macOS device running High Sierra and newer, with iMessage activated successfully.
+
+{% hint style="info" %}
+macOS El Capitan is _no longer supported_
+{% endhint %}
 
 macOS VMs are also compatible, however you **must** be able to use iMessage (this involves some work with spoofing your hardware to seem like a real Mac inside the VMX file). See [running-a-macos-vm](advanced/macos-virtualization/running-a-macos-vm/ "mention") for more details.
 
@@ -20,22 +24,16 @@ If you'd like the most stable experience, we recommend going with Catalina or Bi
 
 ## Downloads
 
-{% embed url="https://github.com/BlueBubblesApp/bluebubbles-server/releases" %}
-GitHub Releases (Stable and Alpha)
-{% endembed %}
+{% @github-files/github-code-block url="https://github.com/BlueBubblesApp/bluebubbles-server/releases" %}
 
 ## Contributors <a href="#contributors" id="contributors"></a>
 
 ### Main Developers <a href="#main-developers" id="main-developers"></a>
 
-{% embed url="https://github.com/zlshames" %}
-Zach
-{% endembed %}
+{% @github-files/github-code-block url="https://github.com/zlshames" %}
 
 ### Other Contributors <a href="#other-contributors" id="other-contributors"></a>
 
 We appreciate y'all!
 
-{% embed url="https://github.com/elliotnash" %}
-Elliot
-{% endembed %}
+{% @github-files/github-code-block url="https://github.com/elliotnash" %}
