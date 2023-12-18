@@ -12,7 +12,7 @@ The server uses AppleScript to perform simple functions like sending messages & 
 
 ## Supported Mac Devices
 
-Any macOS device running High Sierra and newer, with iMessage activated successfully.
+Any macOS device running Sierra and newer, with iMessage activated successfully.
 
 {% hint style="info" %}
 macOS El Capitan is _no longer supported_
