@@ -33,8 +33,7 @@ If you would like to use a _lower_ macOS version than Catalina, you will need to
 
 1. Follow the OpenCore guide linked above, but only complete the following sections (make sure to save all information from these sections for later use):
    * **Using GenSMBIOS**
-     * You will want to use the model number `MacPro7,1`. Verify your serial numbers using the [Apple Check Coverage Page.](https://checkcoverage.apple.com/) You have got a good serial number when the page says **Purchase Date not Validated**.
-       * We recommend to use a browser with TOR functionality for this step, such as Brave Browser (use "New private window with Tor" option). This is so Apple does not rate limit you when checking serials (TOR randomizes your IP address and location every time you load the page, at the cost of network speed).
+     * You will want to use the model number `MacPro7,1`. Verify your serial numbers using the [Apple Check Coverage Page.](https://checkcoverage.apple.com/) You have got a good serial number when the page highlights the entry box in red and says **Please enter a valid serial number.**.  As long as it was correctly copied from GenSMBIOS you should be good to go.
    * **Choose a Mac Address**
    * **Derive the corresponding ROM Value**
 2. Open up a Notepad window, and type the following information (you will need this later):\
