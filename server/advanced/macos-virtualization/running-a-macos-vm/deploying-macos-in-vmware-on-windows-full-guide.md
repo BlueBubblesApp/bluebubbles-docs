@@ -236,7 +236,7 @@ By default, your macOS deployment will _not_ support iServices such as iMessage.
 4. Once opened, navigate to the `SMBIOS` tab in the sidebar.
 5. Find the up/down arrow button under the large "question mark" image, and to the right of the `Update Firmware Only` checkbox.
 6. Click on the up/down arrow button and select any product made in 2019 or newer.
-   * We recommend `MacPro7,1` or `iMac19,1`
+   * We recommend `MacPro7,1` or `iMac16,1`
 7. Copy the following configuration to an editor (i.e. Notepad), on your host computer (Windows).
 
 ```config
