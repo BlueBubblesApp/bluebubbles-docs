@@ -24,6 +24,8 @@ Once full disk access is enabled, proceed to the **Notifications** step. Switch 
 
 {% tabs %}
 {% tab title="Written Guide" %}
+> [!NOTE]
+> The name of the project does not have to be **BlueBubblesApp** if you already have a project by that name.
 1. Click **Create a Project** and enter **BlueBubblesApp** as the name. Disable Google Analytics (why do you want Google spying on you?) and wait for the project to be created.
 2. In the tabs on the far left, click **Build** > **Firestore Database.**
 3. Next, **Create database** and press **Next > Enable.** You can change the database location if you are not based in North America so it is closer to you.
