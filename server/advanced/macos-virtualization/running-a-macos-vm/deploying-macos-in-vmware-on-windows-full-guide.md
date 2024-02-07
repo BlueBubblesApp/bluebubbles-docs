@@ -88,7 +88,7 @@ In order for you to even be able to load a macOS system into VMWare, you will ne
 #### Pre-requisites
 
 * You should have either VMWare Workstation Player (free), or VMWare Workstation Pro (paid) installed
-  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/16_0))
   * VMWare Workstation Pro (paid): [https://www.vmware.com/products/workstation-pro.html](https://www.vmware.com/products/workstation-pro.html)
 
 #### Instructions (VMWare 16)
