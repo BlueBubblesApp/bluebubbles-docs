@@ -10,7 +10,7 @@ description: >-
 
 This will sometimes occur after disabling SIP (System Integrity Protection) on your Mac during the setup for the Private API. We are unsure exactly why this happens, but we know how to fix it.
 
-## How can this be fixed?&#x20;
+## How can this be fixed?
 
 MacOS maintains a database of the allowed permissions. All we need to do is modify this database and manually add the BlueBubbles Server to the "allow" list for the Contacts permission.
 
