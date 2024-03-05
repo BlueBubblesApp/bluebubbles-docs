@@ -6,3 +6,4 @@ description: >-
 
 # Troubleshooting Guides - Overview
 
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts" %}
