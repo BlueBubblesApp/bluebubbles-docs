@@ -17,8 +17,10 @@
 * [Migrating Servers](basic-guides/migrating-servers.md)
 * [User-Contributed Install Guides](basic-guides/user-contributed-install-guides/README.md)
   * [The Ultimate BlueBubbles Guide (Reactions + All iMessage Features on Android, Private API)](https://www.youtube.com/watch?v=SXZqgnal9Jo)
-* [Troubleshooting Guides](basic-guides/troubleshooting-guides/README.md)
-  * [BlueBubbles Server Cannot Access MacOS Contacts](basic-guides/troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
+
+## Troubleshooting Guides
+
+* [BlueBubbles Server Cannot Access MacOS Contacts](troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
