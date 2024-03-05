@@ -21,7 +21,7 @@
 ## Troubleshooting Guides
 
 * [Troubleshooting Guides - Overview](troubleshooting-guides/troubleshooting-guides-overview.md)
-  * [BlueBubbles Server Cannot Access MacOS Contacts](troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
+* [BlueBubbles Server Cannot Access MacOS Contacts](troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
