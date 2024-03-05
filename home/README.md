@@ -16,7 +16,9 @@ Make sure to check out our Discord linked in the header for any questions not co
 
 {% embed url="https://docs.bluebubbles.app/server/basic-guides/basic-guides-overview" %}
 
-{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/troubleshooting-guides-overview" %}
+{% content-ref url="https://app.gitbook.com/s/ThJZqK6Woy4I46skzbiC/troubleshooting-guides" %}
+[Troubleshooting Guides](https://app.gitbook.com/s/ThJZqK6Woy4I46skzbiC/troubleshooting-guides)
+{% endcontent-ref %}
 
 {% embed url="https://docs.bluebubbles.app/server/advanced/advanced-guides-overview" %}
 
