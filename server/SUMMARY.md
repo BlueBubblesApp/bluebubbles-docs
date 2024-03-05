@@ -18,7 +18,7 @@
 * [User-Contributed Install Guides](basic-guides/user-contributed-install-guides/README.md)
   * [The Ultimate BlueBubbles Guide (Reactions + All iMessage Features on Android, Private API)](https://www.youtube.com/watch?v=SXZqgnal9Jo)
 * [Troubleshooting Guides](basic-guides/troubleshooting-guides/README.md)
-  * [Server Isn't Requesting for the Contacts Permission](basic-guides/troubleshooting-guides/server-isnt-requesting-for-the-contacts-permission.md)
+  * [BlueBubbles Server Cannot Access MacOS Contacts](basic-guides/troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
