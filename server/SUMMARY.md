@@ -22,6 +22,7 @@
 
 * [Troubleshooting Guides - Overview](troubleshooting-guides/troubleshooting-guides-overview.md)
 * [BlueBubbles Server Cannot Access MacOS Contacts](troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
+* [Not Receiving Notifications on Android](troubleshooting-guides/not-receiving-notifications-on-android.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
