@@ -79,3 +79,11 @@ Sometimes none of the solutions seem to work. Your next best option is to just r
 ### Install Google Play Services via MicroG (for custom ROMs)
 
 If you are using custom ROM for your Android device, it could just be that you do not have Google Play Services installed. Unfortunately, that is required to receive notifications properly. You will need to install Google Play Services via MicroG.
+
+### If nothing seems to work...
+
+If none of these solutions seem to work, I think the culprit is likely your macOS envrionment. Make sure to check the BlueBubbles Server's errors/alerts and look for anything to indicate what the culprit might be.
+
+{% hint style="info" %}
+For additional help, join the Discord server!
+{% endhint %}
