@@ -1,6 +1,7 @@
 # Table of contents
 
 * [BlueBubbles Documentation](README.md)
+* [BlueBubbles Blog](https://docs.bluebubbles.app/blog/)
 
 ## 🖥️ BlueBubbles Server
 
