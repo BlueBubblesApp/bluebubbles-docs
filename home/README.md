@@ -31,3 +31,7 @@ How to Setup a Virtual MacOS Device
 {% embed url="https://docs.bluebubbles.app/server/advanced/multiple-users-on-the-same-mac" %}
 
 {% embed url="https://docs.bluebubbles.app/server/advanced/generating-an-ssl-certificate-using-certbot" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/not-receiving-notifications-on-android" %}
+Troubleshooting Notification Issues
+{% endembed %}
