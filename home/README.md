@@ -13,15 +13,19 @@ Below are some quick links to documentation you may find useful
 ### Quick Links
 
 {% embed url="https://bluebubbles.app/install/" %}
+Install Guide on Our Main Website
+{% endembed %}
 
 {% embed url="https://bluebubbles.app/faq" %}
-FAQ
+Frequently Asked Questions
 {% endembed %}
 
 {% embed url="https://docs.bluebubbles.app/server/developer-guides/rest-api-and-webhooks" %}
+Use BlueBubbles Programmatically
+{% endembed %}
 
 {% embed url="https://docs.bluebubbles.app/server/advanced/running-on-macos-vm" %}
-macOS VM Guides
+How to Setup a Virtual MacOS Device
 {% endembed %}
 
 {% embed url="https://docs.bluebubbles.app/server/advanced/multiple-users-on-the-same-mac" %}
