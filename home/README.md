@@ -29,3 +29,5 @@ How to Setup a Virtual MacOS Device
 {% endembed %}
 
 {% embed url="https://docs.bluebubbles.app/server/advanced/multiple-users-on-the-same-mac" %}
+
+{% embed url="https://docs.bluebubbles.app/server/advanced/generating-an-ssl-certificate-using-certbot" %}
