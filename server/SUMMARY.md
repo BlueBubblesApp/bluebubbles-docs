@@ -25,6 +25,7 @@
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
+* [Generating an SSL Certificate using CertBot](advanced/generating-an-ssl-certificate-using-certbot.md)
 * [Advanced Guides - Overview](advanced/advanced-guides-overview.md)
 * [Multiple Users on the Same Mac](advanced/multiple-users-on-the-same-mac.md)
 * [Disabling SIP on Unofficial Macs for the Private API](advanced/disabling-sip-on-unofficial-macs-for-the-private-api.md)
