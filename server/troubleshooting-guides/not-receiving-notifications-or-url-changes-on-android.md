@@ -1,20 +1,20 @@
 ---
 description: >-
   This page will help you troubleshoot and (hopefully) fix issues with not
-  receiving notifications on the Android app
+  receiving notifications or URL changes on the Android app
 ---
 
-# Not Receiving Notifications on Android
+# Not Receiving Notifications or URL Changes on Android
 
 ## How are notifications delivered?
 
-Notifications are delivered via Google Firebase Messaging (FCM). During the setup of the BlueBubbles Server, you will be given the option to setup a Google Firebase project, linked to your Google account. This allows the BlueBubbles Server to dispatch notifications to your Android device without an open connection to the server.
+Notifications and URL changes are delivered via Google Firebase Messaging (FCM). During the setup of the BlueBubbles Server, you will be given the option to setup a Google Firebase project, linked to your Google account. This allows the BlueBubbles Server to dispatch notifications to your Android device without an open connection to the server. It will also allow the server to write your latest server URL to your Google Firebase's Firestore.
 
 {% hint style="info" %}
-If you do not complete the Firebase setup, you will not be able to receive Notifications on Android!
+If you do not complete the Firebase setup, you will not be able to receive Notifications or URL changes on Android!
 {% endhint %}
 
-## I completed the Firebase setup, but still am not receiving notifications
+## I completed the Firebase setup, but still am not receiving notifications or URL changes
 
 If you have completed the Firebase setup, but are still not receiving notifications, it may be caused by a variety of issues. Here are a few:
 
@@ -27,7 +27,7 @@ If you have completed the Firebase setup, but are still not receiving notificati
 * You do not have any devices registered within the `Devices` tab on the BlueBubbles Server
   * This is the first indication that you will not receive notifications
 * Google Firebase is being blocked by a VPN, Firewall, Proxy, or DNS Blocker
-  * If this is the case, you'll see a `Failed to start FCM Service` error on your server with an error message of  `dial tcp: no such host`.
+  * If this is the case, you'll see a `Failed to start FCM Service` error on your server with an error message of  `dial tcp: no route to host`.
 
 ## How to fix notifications
 
@@ -50,6 +50,20 @@ If your time does not re-sync after entering your password, you can try changing
 {% hint style="info" %}
 If you are manually setting your time and time zone, you will likely need to switch to automatic setting of time and time zone.
 {% endhint %}
+
+### Check if your VPN, proxy, or DNS blocker is interfering
+
+In some cases, having a VPN, proxy, or DNS blocker may cause interference with registering your device with your Google Firebase project. As a result, you may not be able to register your device with your server, and subsequently, prevent notifications and URL changes to be dispatched to your Android device.
+
+The following apps/tools have been seen to cause issues:
+
+* Blockada
+* Adguard
+  * [How to use BlueBubbles with Adguard](https://docs.bluebubbles.app/client/usage-guides/using-bluebubbles-with-adguard)
+* PiHole
+* Certain VPNs
+
+If you are using any of these apps/tools (or similar), and are not able to register your device with the server, disabling them during the BlueBubbles setup may fix the registration issues.
 
 ### Re-register your Android device
 
@@ -82,7 +96,7 @@ If you are using custom ROM for your Android device, it could just be that you d
 
 ### If nothing seems to work...
 
-If none of these solutions seem to work, I think the culprit is likely your macOS envrionment. Make sure to check the BlueBubbles Server's errors/alerts and look for anything to indicate what the culprit might be.
+If none of these solutions seem to work, I think the culprit is likely your macOS environment. Make sure to check the BlueBubbles Server's errors/alerts and look for anything to indicate what the culprit might be.
 
 {% hint style="info" %}
 For additional help, join the Discord server!
