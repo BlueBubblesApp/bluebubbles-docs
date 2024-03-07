@@ -72,6 +72,8 @@ If you are using any of these apps/tools (or similar), and are not able to regis
 3. Open your `BlueBubbles App` on Android, and open the Settings
 4. Navigaote to the `Connection & Server` page
 5. Use the `Re-configure with BlueBubbles Server` option to re-connect your Android device
+   * You can also use the `Sign in with Google` button
+   * You can also use the `Fetch Firebase Config` button
 6. On your `BlueBubbles Server`, use the `Manage -> Refresh` button on the `Devices` tab to see if your device is now registered.
 
 You should now see your new device ID registered with the server, and should start receiving notifications!
