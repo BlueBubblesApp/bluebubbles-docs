@@ -37,7 +37,7 @@ Run the following commands in Terminal:
 
 1. `mkdir -p ~/certbot/config ~/certbot/work ~/certbot/logs ~/.config/letsencrypt`
    * This will create the 4 required directories
-2. `echo "config-dir = ~/certbot/config work-dir = ~/certbot/work\nlogs-dir = ~/certbot/logs key-type = rsa\n" > ~/.config/letsencrypt/cli.ini`
+2. `echo "config-dir = ~/certbot/config\nwork-dir = ~/certbot/work\nlogs-dir = ~/certbot/logs\nkey-type = rsa"  > ~/.config/letsencrypt/cli.ini`
    * This will set the directory variables in the Let's Encrypt CLI config file
 
 ### Creating your Certificate
