@@ -63,6 +63,10 @@ The following apps/tools have been seen to cause issues:
 * PiHole
 * Certain VPNs
 
+{% hint style="warning" %}
+Ensure that `firebaseinstallations.googleapis.com` is not being blocked!
+{% endhint %}
+
 If you are using any of these apps/tools (or similar), and are not able to register your device with the server, disabling them during the BlueBubbles setup may fix the registration issues.
 
 ### Re-register your Android device
