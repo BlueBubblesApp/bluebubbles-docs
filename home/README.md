@@ -20,6 +20,10 @@ Install Guide on Our Main Website
 Frequently Asked Questions
 {% endembed %}
 
+{% embed url="https://docs.bluebubbles.app/helper-bundle/installation" %}
+Get Enhanced Features using the Private API
+{% endembed %}
+
 {% embed url="https://docs.bluebubbles.app/server/developer-guides/rest-api-and-webhooks" %}
 Use BlueBubbles Programmatically
 {% endembed %}
