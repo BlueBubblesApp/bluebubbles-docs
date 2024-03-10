@@ -1,2 +1,0 @@
-# User-Contributed Install Guides
-

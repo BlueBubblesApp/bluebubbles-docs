@@ -15,8 +15,6 @@
 * [Port Forwarding & Dynamic DNS](basic-guides/port-forwarding-and-dynamic-dns.md)
 * [Preventing macOS from Sleeping](basic-guides/preventing-macos-from-sleeping.md)
 * [Migrating Servers](basic-guides/migrating-servers.md)
-* [User-Contributed Install Guides](basic-guides/user-contributed-install-guides/README.md)
-  * [The Ultimate BlueBubbles Guide (Reactions + All iMessage Features on Android, Private API)](https://www.youtube.com/watch?v=SXZqgnal9Jo)
 
 ## Troubleshooting Guides
 
