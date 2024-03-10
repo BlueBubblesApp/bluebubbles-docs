@@ -31,7 +31,7 @@ While the previous solutions are great, macOS does have some built-in battery op
 
 To find these settings, open the `System Preferences` App and find the `Battery` settings. You can also access them by clicking the Battery icon in your macOS status bar, then selecting `Battery Preferences`. Once there, check out the `Battery` and `Power Adapter` settings.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 On the `Battery` page, you may want to configure the settings to **never turn the display off**, as well as disable the `Enable Power Nap while on battery power` toggle.
 

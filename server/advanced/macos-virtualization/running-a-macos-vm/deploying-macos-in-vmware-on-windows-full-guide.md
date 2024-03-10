@@ -6,7 +6,7 @@ This document will guide you on how to setup a macOS virtual machine on your Win
 
 Make sure that your PC has Virtualization enabled in the BIOS. If you do not know if you have virtualization enabled, open Task Manager's `Performance` tab:
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 If virtualization is _disabled_, you need to boot into your PC's BIOS and enable it. Now, enabling it will be different per-vendor, however, here are 2 YouTube videos that may help:
 
@@ -39,7 +39,7 @@ The first step in setting up a virtual machine is getting an image that is compa
     * Running the command will download the `BaseSystem.dmg` image from Apple's servers
 
     {% hint style="info" %}
-    #### macOS Ventura
+    **macOS Ventura**
 
     If you'd like to download macOS Ventura, use the command below:
 
@@ -88,7 +88,7 @@ In order for you to even be able to load a macOS system into VMWare, you will ne
 #### Pre-requisites
 
 * You should have either VMWare Workstation Player (free), or VMWare Workstation Pro (paid) installed
-  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/16_0))
+  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop\_end\_user\_computing/vmware\_workstation\_player/16\_0))
   * VMWare Workstation Pro (paid): [https://www.vmware.com/products/workstation-pro.html](https://www.vmware.com/products/workstation-pro.html)
 
 #### Instructions (VMWare 16)
@@ -118,7 +118,7 @@ This section will detail how to create the base virtual machine using the recove
 **Pre-requisites**
 
 * You should have either VMWare Workstation Player (free), or VMWare Workstation Pro (paid) installed
-  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/16_0))
+  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop\_end\_user\_computing/vmware\_workstation\_player/16\_0))
   * VMWare Workstation Pro (paid): [https://www.vmware.com/products/workstation-pro.html](https://www.vmware.com/products/workstation-pro.html)
 * You should have patched your VMWare installation using the Unlocker app
 
@@ -176,7 +176,7 @@ cpuid.1.edx = "0000:0111:1000:1011:1111:1011:1111:1111"
 ```
 
 {% hint style="warning" %}
-#### macOS Ventura
+**macOS Ventura**
 
 If your VM is macOS Ventura, you may need to add **(or edit)** the following to enable internet connectivity:
 

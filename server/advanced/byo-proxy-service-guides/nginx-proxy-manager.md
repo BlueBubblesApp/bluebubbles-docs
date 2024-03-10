@@ -29,9 +29,9 @@ description: >-
 
 ![SSL Settings](<../../.gitbook/assets/image (6).png>)
 
-![Connection Settings](<../../.gitbook/assets/image (3).png>)
+![Connection Settings](<../../.gitbook/assets/image (3) (1).png>)
 
-![Proxy Host](../../.gitbook/assets/image.png)
+![Proxy Host](<../../.gitbook/assets/image (5).png>)
 
 #### Credit
 
