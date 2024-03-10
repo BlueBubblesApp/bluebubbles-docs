@@ -23,6 +23,7 @@
 * [Not Receiving Notifications or URL Changes on Android](troubleshooting-guides/not-receiving-notifications-or-url-changes-on-android.md)
 * [Unable to Send Messages to International Contacts](troubleshooting-guides/unable-to-send-messages-to-international-contacts.md)
 * [BlueBubbles App is Taking Up Too Much Storage](troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage.md)
+* [Can't Send Messages from BlueBubbles](troubleshooting-guides/cant-send-messages-from-bluebubbles.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
