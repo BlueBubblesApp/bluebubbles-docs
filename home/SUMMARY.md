@@ -6,6 +6,7 @@
 ## 🖥️ BlueBubbles Server
 
 * [Overview & Installation](https://docs.bluebubbles.app/server)
+* [Private API Setup](https://docs.bluebubbles.app/helper-bundle/installation)
 * [Basic Guides](https://docs.bluebubbles.app/server/basic-guides/basic-guides-overview)
 * [Troubleshooting Guides](https://docs.bluebubbles.app/server/troubleshooting-guides/troubleshooting-guides-overview)
 * [Advanced Guides](https://docs.bluebubbles.app/server/advanced/advanced-guides-overview)
