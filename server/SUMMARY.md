@@ -24,6 +24,7 @@
 * [BlueBubbles Server Cannot Access MacOS Contacts](troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts.md)
 * [Not Receiving Notifications or URL Changes on Android](troubleshooting-guides/not-receiving-notifications-or-url-changes-on-android.md)
 * [Unable to Send Messages to International Contacts](troubleshooting-guides/unable-to-send-messages-to-international-contacts.md)
+* [BlueBubbles App is Taking Up Too Much Storage](troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
