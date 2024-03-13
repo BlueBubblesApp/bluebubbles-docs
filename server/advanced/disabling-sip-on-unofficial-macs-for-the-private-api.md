@@ -8,7 +8,7 @@ Here are some steps that have worked for our users running various different uno
 
 Use the OpenCore Configurator and check the following boxes:
 
-![SIP Config](<../.gitbook/assets/image (1) (1).png>)
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Once complete, build OpenCore again and reboot. Done!
 
