@@ -8,7 +8,7 @@ description: >-
 # Registering a Phone Number with your iMessage Account
 
 {% hint style="warning" %}
-Some of the following links are to external websites that are not affiliated with BlueBubbles and their content can change at any time.
+The following links are to external websites that are not affiliated with BlueBubbles and their content can change at any time. Use at your own risk.
 {% endhint %}
 
 ## Non-Jailbreak Methods
@@ -16,7 +16,7 @@ Some of the following links are to external websites that are not affiliated wit
 The following guides _do not_ require you to have a jailbroken iPhone to accomplish phone number registration
 
 {% embed url="https://www.reddit.com/r/BlueBubbles/comments/1938ock/stop_using_old_methods_heres_a_new_one/" %}
-A newer SIM-card-swap method that is easier than previous methods and with additional intructions for eSIM-only iPhone models.
+A newer SIM-card-swap method that is easier than previous methods and with additional instructions for eSIM-only iPhone models.
 {% endembed %}
 
 {% embed url="https://www.reddit.com/r/AirMessage/comments/avj2y5/how_to_use_phone_number_with_airmessage_sometimes/" %}
