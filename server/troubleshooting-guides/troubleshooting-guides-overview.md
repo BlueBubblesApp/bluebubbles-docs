@@ -8,4 +8,10 @@ description: >-
 
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-server-cannot-access-macos-contacts" %}
 
-{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/not-receiving-notifications-on-android" %}
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/not-receiving-notifications-or-url-changes-on-android" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/unable-to-send-messages-to-international-contacts" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/cant-send-messages-from-bluebubbles" %}
