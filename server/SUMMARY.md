@@ -15,6 +15,7 @@
 * [Port Forwarding & Dynamic DNS](basic-guides/port-forwarding-and-dynamic-dns.md)
 * [Prevent macOS from Sleeping](basic-guides/preventing-macos-from-sleeping.md)
 * [Migrating Servers](basic-guides/migrating-servers.md)
+* [Multiple Users on the Same Mac](basic-guides/multiple-users-on-the-same-mac.md)
 
 ## Troubleshooting Guides
 
@@ -27,10 +28,10 @@
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
-* [Generating an SSL Certificate using CertBot](advanced/generating-an-ssl-certificate-using-certbot.md)
 * [Advanced Guides - Overview](advanced/advanced-guides-overview.md)
-* [Multiple Users on the Same Mac](advanced/multiple-users-on-the-same-mac.md)
+* [Generating an SSL Certificate using CertBot](advanced/generating-an-ssl-certificate-using-certbot.md)
 * [Disabling SIP on Unofficial Macs for the Private API](advanced/disabling-sip-on-unofficial-macs-for-the-private-api.md)
+* [Registering a Phone Number with your iMessage Account](advanced/registering-a-phone-number-with-your-imessage-account.md)
 * [macOS Virtualization](advanced/macos-virtualization/README.md)
   * [Running a macOS VM](advanced/macos-virtualization/running-a-macos-vm/README.md)
     * [Deploying macOS in VMWare on Windows (Full Guide)](advanced/macos-virtualization/running-a-macos-vm/deploying-macos-in-vmware-on-windows-full-guide.md)
