@@ -18,7 +18,7 @@ This guide is tailored towards the Android Studio IDE. You can also build in VSC
 
 1. Clone the repository to your system
    1. We recommend building off the `development` branch! It has the more recent code that is more likely to build without errors.
-2. Add a blank file named `.env` to the root of the project directory. This is to prevent a build error.
+2. Add a file named `.env` to the root of the project directory. Inside it, place `GIPHY_API_KEY = ""`. This is to prevent a build error.
 
 ### Android
 
