@@ -25,7 +25,7 @@ Cons:
 
 ### **Setting up Cloudflare tunnels with your domain**
 
-1. Login to the Zero Trust dashboard at [https://dash.teams.cloudflare.com/](https://dash.teams.cloudflare.com/) and go to Access > Tunnels.
+1. Login to the Zero Trust dashboard at [https://dash.teams.cloudflare.com/](https://dash.teams.cloudflare.com/) and go to Networks > Tunnels.
 2. Select Create a tunnel
 3. Enter a name for your tunnel. For example, you could name it Bluebubbles.
 4. Select Save tunnel
