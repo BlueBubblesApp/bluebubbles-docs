@@ -25,6 +25,7 @@
 * [Unable to Send Messages to International Contacts](troubleshooting-guides/unable-to-send-messages-to-international-contacts.md)
 * [BlueBubbles App is Taking Up Too Much Storage](troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage.md)
 * [Can't Send Messages from BlueBubbles](troubleshooting-guides/cant-send-messages-from-bluebubbles.md)
+* [BlueBubbles Server Opens to a Blank White Screen](troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
