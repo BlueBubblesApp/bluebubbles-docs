@@ -15,3 +15,5 @@ description: >-
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage" %}
 
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/cant-send-messages-from-bluebubbles" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen" %}
