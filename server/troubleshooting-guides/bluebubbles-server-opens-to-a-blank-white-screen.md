@@ -20,7 +20,7 @@ This is an environmental issue caused by some sort of conflict between Electron 
 
 From what has been reported to us, this only occurs in environments that meet the following criteria:
 
-* macOS Sonoma
+* macOS Ventura+
 * SIP disabled through OpenCore
 
 ### How can I fix this?
