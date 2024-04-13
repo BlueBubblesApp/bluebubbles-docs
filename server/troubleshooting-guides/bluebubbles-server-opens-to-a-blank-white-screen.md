@@ -16,7 +16,7 @@ Here is what the issue would look like:
 
 ### What's the cause?
 
-This is an environmental issue caused by some sort of conflict between Electron & OpenCore. Electron is the framework the server uses to run, and for whatever reason, some users run into an issue where the server's UI is rendered useless when SIP is disabled.
+This is an environmental issue caused by some sort of conflict between Electron's network  & OpenCore. Electron is the framework the server uses to run, and for whatever reason, some users run into an issue where the server's UI is rendered useless when SIP is disabled.
 
 From what has been reported to us, this only occurs in environments that meet the following criteria:
 

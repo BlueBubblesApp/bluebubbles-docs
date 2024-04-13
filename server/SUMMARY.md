@@ -26,6 +26,7 @@
 * [BlueBubbles App is Taking Up Too Much Storage](troubleshooting-guides/bluebubbles-app-is-taking-up-too-much-storage.md)
 * [Can't Send Messages from BlueBubbles](troubleshooting-guides/cant-send-messages-from-bluebubbles.md)
 * [BlueBubbles Server Opens to a Blank White Screen](troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen.md)
+* [Slow Upload Speed When Connecting Over LAN](troubleshooting-guides/slow-upload-speed-when-connecting-over-lan.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
