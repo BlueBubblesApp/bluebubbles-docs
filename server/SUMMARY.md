@@ -27,6 +27,7 @@
 * [Can't Send Messages from BlueBubbles](troubleshooting-guides/cant-send-messages-from-bluebubbles.md)
 * [BlueBubbles Server Opens to a Blank White Screen](troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen.md)
 * [Slow Upload Speed When Connecting Over LAN](troubleshooting-guides/slow-upload-speed-when-connecting-over-lan.md)
+* [Restarting Your Server Without a Direct Connection](troubleshooting-guides/restarting-your-server-without-a-direct-connection.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
