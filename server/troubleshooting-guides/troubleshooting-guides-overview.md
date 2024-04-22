@@ -17,3 +17,7 @@ description: >-
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/cant-send-messages-from-bluebubbles" %}
 
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/slow-upload-speed-when-connecting-over-lan" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/restarting-your-server-without-a-direct-connection" %}
