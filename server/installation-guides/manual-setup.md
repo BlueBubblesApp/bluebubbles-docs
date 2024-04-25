@@ -10,7 +10,13 @@ On the macOS device you'd like to use for the server, open the [server GitHub](h
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-05-02 at 12.46.24 PM (1).png" alt=""><figcaption><p>Download the .dmg file in the Assets list</p></figcaption></figure>
 
-Open the app and drag it to the applications folder when prompted. Right click (or Ctrl + Left click) the popup to **Eject** it. Finally, open the app from the applications folder, and you will be greeted with the welcome screen.
+Locate the downloaded .dmg in your Downloads folder in **Finder.** Right click (or Ctrl + Left click) the .dmg file to **Open** the app. (Do not open the .dmg from the Downloads Center in the Dock!)
+
+{% hint style="info" %}
+Apple disabled our Developer Account with no further explanation. As a result, the server app is now unsigned. The above process is required to install the unsigned app without visiting the security menus in System Preferences.
+{% endhint %}
+
+Drag the app icon to the applications folder when prompted. Right click (or Ctrl + Left click) the popup to **Eject** it. Finally, open the app from the applications folder, and you will be greeted with the welcome screen.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-05-02 at 12.54.20 PM.png" alt=""><figcaption><p>Welcome screen</p></figcaption></figure>
 
@@ -24,8 +30,10 @@ Once full disk access is enabled, proceed to the **Notifications** step. Switch 
 
 {% tabs %}
 {% tab title="Written Guide" %}
-> [!NOTE]
-> The name of the project does not have to be **BlueBubblesApp** if you already have a project by that name.
+{% hint style="info" %}
+The name of the project does not have to be **BlueBubblesApp** if you already have a project by that name.
+{% endhint %}
+
 1. Click **Create a Project** and enter **BlueBubblesApp** as the name. Disable Google Analytics (why do you want Google spying on you?) and wait for the project to be created.
 2. In the tabs on the far left, click **Build** > **Firestore Database.**
 3. Next, **Create database** and press **Next > Enable.** You can change the database location if you are not based in North America so it is closer to you.
