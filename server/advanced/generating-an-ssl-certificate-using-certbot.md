@@ -58,7 +58,7 @@ By default, your certificate only lasts a set amount of time. In order to automa
    * `crontab -e`
 2. Hit the `i` key on your keyboard once
 3. Paste the following line into the text area in your Terminal:
-   * `0 0,12 * * * /usr/local/bin/python3 -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot renew -q`
+   * `0 0,12 * * * /usr/local/bin/python3 -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot renew -q --post-hook "killall BlueBubbles ; sleep 10 && open -a BlueBubbles"`
 4. Hit the `Escape` key, then type `:wq` and then hit `Enter`
 
 The `cron` configuration is now saved and your certificate will auto-renew. To check that the renewal process is working, wait at least 12 hours, then check the certbot logs located at `~/certbot/logs/letsencrypt.log`. If you don't see any recent logs, then it's possible the paths in the crontab are not correct. Run the following command and verify the output matches the paths in the crontab entry.
