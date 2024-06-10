@@ -11,6 +11,12 @@ description: >-
 The following links are to external websites that are not affiliated with BlueBubbles and their content can change at any time. Use at your own risk.
 {% endhint %}
 
+## SIM / eSIM Swapping Methods
+
+The following guide is maintained by a BlueBubbles community member and is a really good resource to find out information about registering your phone number using SIM-swapping
+
+{% embed url="https://guide.atbluebubbles.com/" %}
+
 ## Non-Jailbreak Methods
 
 The following guides _do not_ require you to have a jailbroken iPhone to accomplish phone number registration
