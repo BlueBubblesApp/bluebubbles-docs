@@ -38,24 +38,24 @@ Special thanks to [**Scr0nch**](https://github.com/Scr0nch) for the basis of thi
 
     \
     This will make sure that the specified program will be run when you first login to your Mac (`RunAtLoad`), and will be restarted if it crashes (`KeepAlive`). The `SuccessfulExit: false` flag means that the app will _not_ be restarted if the server exits successfully; for example, if you manually close the app.
-3. Save the file to `~/Library/LaunchAgents/app.bluebubbles.plist`
+3. Save the file to `~/Library/LaunchAgents/com.bluebubbles.server.plist`
    1. `CMD + S` to save the file
    2. `CMD + Shift + G` to open a file location
    3. Paste `~/Library/` into the popup and hit Enter
    4. Find the `LaunchAgents` folder and open it
       * If it does not exist, create it using the `New Folder` button
-   5. Enter `app.bluebubbles.plist` in the `Save As` field
+   5. Enter `com.bluebubbles.server.plist` in the `Save As` field
 4. Disable the built-in autostart option in the BlueBubbles Server:\
    ![](<../.gitbook/assets/image (9).png>)
 5.  Install the launch agent and load it after the current user graphically logs in:
 
     ```
-    launchctl bootstrap gui/$(id -u $(whoami)) ~/Library/LaunchAgents/app.bluebubbles.plist
+    launchctl bootstrap gui/$(id -u $(whoami)) ~/Library/LaunchAgents/com.bluebubbles.server.plist
     ```
 6.  Immediately start the launch agent (only necessary for the first time):
 
     ```
-    launchctl kickstart gui/$(id -u $(whoami))/app.bluebubbles
+    launchctl kickstart gui/$(id -u $(whoami))/com.bluebubbles.server
     ```
 
 Some additional notes:
@@ -63,10 +63,10 @@ Some additional notes:
 *   To uninstall the launch agent:
 
     ```
-    launchctl remove app.bluebubbles
+    launchctl remove com.bluebubbles.server
     ```
 *   To print information about the launch agent:
 
     ```
-    launchctl print gui/$(id -u $(whoami))/app.bluebubbles
+    launchctl print gui/$(id -u $(whoami))/com.bluebubbles.server
     ```
