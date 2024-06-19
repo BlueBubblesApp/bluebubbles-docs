@@ -11,3 +11,5 @@ description: Here you'll find simple guides for using BlueBubbles
 {% embed url="https://docs.bluebubbles.app/server/basic-guides/migrating-servers" %}
 
 {% embed url="https://docs.bluebubbles.app/server/basic-guides/multiple-users-on-the-same-mac" %}
+
+{% embed url="https://docs.bluebubbles.app/server/basic-guides/autostart-server-after-crash" %}
