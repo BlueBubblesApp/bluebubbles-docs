@@ -16,6 +16,7 @@
 * [Prevent macOS from Sleeping](basic-guides/preventing-macos-from-sleeping.md)
 * [Migrating Servers](basic-guides/migrating-servers.md)
 * [Multiple Users on the Same Mac](basic-guides/multiple-users-on-the-same-mac.md)
+* [Autostart Server After Crash](basic-guides/autostart-server-after-crash.md)
 
 ## Troubleshooting Guides
 
