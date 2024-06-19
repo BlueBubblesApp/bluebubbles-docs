@@ -22,7 +22,7 @@ Special thanks to [**Scr0nch**](https://github.com/Scr0nch) for the basis of thi
     &#x3C;plist version="1.0">
         &#x3C;dict>
             &#x3C;key>Label&#x3C;/key>
-            &#x3C;string>app.bluebubbles&#x3C;/string>
+            &#x3C;string>com.bluebubbles.server&#x3C;/string>
             &#x3C;key>Program&#x3C;/key>
             &#x3C;string>/Users/{username}/Applications/BlueBubbles.app/Contents/MacOS/BlueBubbles&#x3C;/string>
             &#x3C;key>RunAtLoad&#x3C;/key>
