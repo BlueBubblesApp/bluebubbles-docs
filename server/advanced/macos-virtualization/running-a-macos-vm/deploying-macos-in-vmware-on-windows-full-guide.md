@@ -88,7 +88,7 @@ In order for you to even be able to load a macOS system into VMWare, you will ne
 #### Pre-requisites
 
 * You should have either VMWare Workstation Player (free), or VMWare Workstation Pro (paid) installed
-  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop\_end\_user\_computing/vmware\_workstation\_player/16\_0))
+  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Player&displayGroup=VMware%20Workstation%20Player%2016&release=16.2.5&os=&servicePk=208718&language=EN))
   * VMWare Workstation Pro (paid): [https://www.vmware.com/products/workstation-pro.html](https://www.vmware.com/products/workstation-pro.html)
 
 #### Instructions (VMWare 16)
@@ -118,7 +118,7 @@ This section will detail how to create the base virtual machine using the recove
 **Pre-requisites**
 
 * You should have either VMWare Workstation Player (free), or VMWare Workstation Pro (paid) installed
-  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://customerconnect.vmware.com/en/downloads/info/slug/desktop\_end\_user\_computing/vmware\_workstation\_player/16\_0))
+  * VMWare Workstation Player (free): [https://www.vmware.com/products/workstation-player.html](https://www.vmware.com/products/workstation-player.html) ([VMWare Workstation Player 16 download](https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Player&displayGroup=VMware%20Workstation%20Player%2016&release=16.2.5&os=&servicePk=208718&language=EN))
   * VMWare Workstation Pro (paid): [https://www.vmware.com/products/workstation-pro.html](https://www.vmware.com/products/workstation-pro.html)
 * You should have patched your VMWare installation using the Unlocker app
 
