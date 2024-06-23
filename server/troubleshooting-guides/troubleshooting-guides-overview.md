@@ -21,3 +21,5 @@ description: >-
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/slow-upload-speed-when-connecting-over-lan" %}
 
 {% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/restarting-your-server-without-a-direct-connection" %}
+
+{% embed url="https://docs.bluebubbles.app/server/troubleshooting-guides/fix-facetime-features-for-virtual-machines" %}
