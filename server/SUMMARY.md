@@ -29,6 +29,7 @@
 * [BlueBubbles Server Opens to a Blank White Screen](troubleshooting-guides/bluebubbles-server-opens-to-a-blank-white-screen.md)
 * [Slow Upload Speed When Connecting Over LAN](troubleshooting-guides/slow-upload-speed-when-connecting-over-lan.md)
 * [Restarting Your Server Without a Direct Connection](troubleshooting-guides/restarting-your-server-without-a-direct-connection.md)
+* [Fix FaceTime Features for Virtual Machines](troubleshooting-guides/fix-facetime-features-for-virtual-machines.md)
 
 ## Advanced Guides <a href="#advanced" id="advanced"></a>
 
