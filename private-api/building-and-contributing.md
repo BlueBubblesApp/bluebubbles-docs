@@ -21,12 +21,42 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
 
 1. Open the `MacOS-xx` folder (where xx corresponds with your current macOS version) within the cloned repository files
 2. Double click `BlueBubblesHelper.xcworkspace` to open inside Xcode
-3. Once inside Xcode, make sure you are signed into your Apple Developer account.
-4. Open the `BlueBubblesHelper` target window inside Xcode, and navigate to the signing tab. Set the Team dropdown to the result that comes up with your Apple ID.
+   * **Make sure you do not open the `BlueBubblesHelper.xcodeproj` file**
+3. Select the `BlueBubblesHelper` project header in the primary side bar\
+   ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.39.04@2x.png>)
+4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Settings` tab and modify the `Installation Directory` to be where you want the `.dylib` file to output. It should be something like `/path/to/your/code/packages/server/appResources/private-api/macos11`\
 
-![BlueBubblesHelper](<.gitbook/assets/image (1).png>)
 
-1. Now, you are ready to build. Just hit the play button, and the built bundle file will automatically install in MacForge. The iMessage app will quit and re-open to synchronize the changes.
+    <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+5. Select the `BlueBubblesHelper` target (blue block icon) in the secondary sidebar\
+   ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.40.51@2x.png>)
+6.  Select the `Signing & Capabilities` tab and sign in (or select) your Developer account\
+
+
+    <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.42.34@2x.png" alt=""><figcaption></figcaption></figure>
+7. Switch to the `Build Phases` tab and expand the `Run Script` section
+8.  Modify the `codesign` command to pass in the path to your dylib output\
+    \
+    You can also comment out lines 3-4 since the BlueBubbles Server will manage the process now. Killing Messages will have the BlueBubbles Server restart the process with the updated dylib.\
+
+
+    <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 19.38.14@2x.png" alt=""><figcaption></figcaption></figure>
+9.  Ensure that you have the `BlueBubblesHelper Dylib` selected as the build target\
+
+
+    <div align="left">
+
+    <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.45.26@2x.png" alt="" width="375"><figcaption></figcaption></figure>
+
+    </div>
+10. Open up `Terminal` and navigate (`cd`) into the `bluebubbles-helper` project folder
+11. Navigate into the project folder for the Private API Bundle you are working on
+    * i.e. `Messages/MacOS-11+`
+    * i.e. `Messages/MacOS-10`
+    * ie. `FaceTime/MacOS-11+`
+12. Run `pod install`
+    * This should install the the dependencies for the project
+13. Now, you are ready to build. Just hit the play button, and the dylib will be built, outputting to the proper location within the BlueBubbles Server source code (appResources). The Messages app will be killed, which will prompt the BlueBubbles Server to restart the Messages app with the new dylib build.
 
 ## Contributing
 
@@ -58,7 +88,7 @@ The Helper Bundle development is filled with some jargon that might appear confu
 
 1. [Tweak Development Wiki](https://iphonedev.wiki/index.php/Main\_Page) - if you are new to reverse engineering, this may be a helpful resource.
 2. [w0lfschild macOS Headers](https://github.com/w0lfschild/macOS\_headers) - pre-dumped headers for macOS Big Sur and up **only**. If you are developing for Catalina and under, you will need to dump headers on your own machine, using the next tool.
-3. [Steve Nygard class-dump](http://stevenygard.com/projects/class-dump/) - macOS 10 only, [freedomtan classdump-dyld](https://github.com/freedomtan/classdump-dyld/) - macOS 11 only.
+3.  [Steve Nygard class-dump](http://stevenygard.com/projects/class-dump/) - macOS 10 only, [freedomtan classdump-dyld](https://github.com/freedomtan/classdump-dyld/) - macOS 11 only.
 
     Currently there is no classdump tool that we know of which works on macOS Monterey. However, all Big Sur header files should work fine on Monterey machines.
 4. [dyld\_shared\_cache\_util](https://lapcatsoftware.com/articles/bigsur.html) - open-source tool from Apple that also dumps headers on macOS 11. This has not been tested by any developers as of yet, but may be a good alternative to freedomtan's classdump-dyld fork.
@@ -68,9 +98,9 @@ The Helper Bundle development is filled with some jargon that might appear confu
 
 The following will attempt to outline how our development process runs from start to finish when adding a new feature to the bundle.
 
-1. Is the feature reasonable to implement and can we get it to work cross-platform with all clients? Will we be able to send the required data to the bundle from the server app?
+1.  Is the feature reasonable to implement and can we get it to work cross-platform with all clients? Will we be able to send the required data to the bundle from the server app?
 
-    This step is important to ask yourself. Ultimately the bundle is meant to be a companion to the server and clients, since it can't be used as a standalone app. We have to make sure the feature  is reasonable in scope and can actually be implemented on clients.
+    This step is important to ask yourself. Ultimately the bundle is meant to be a companion to the server and clients, since it can't be used as a standalone app. We have to make sure the feature is reasonable in scope and can actually be implemented on clients.
 
     Consider the limitations that the bundle has, especially in communication with the server. We can only send and receive primitive types from both ends, so data must be serialized and sent.
 2. Now for the hard part - finding out which methods and what arguments we need to generate so iMessage does what we want. This step takes the longest by far, and we recommend using the above resources to speed things up a bit.
