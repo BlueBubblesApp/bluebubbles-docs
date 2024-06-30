@@ -24,7 +24,9 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
    * **Make sure you do not open the `BlueBubblesHelper.xcodeproj` file**
 3. Select the `BlueBubblesHelper` project header in the primary side bar\
    ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.39.04@2x.png>)
-4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Settings` tab and modify the `Installation Directory` to be where you want the `.dylib` file to output. It should be something like `/path/to/your/code/packages/server/appResources/private-api/macos11`\
+4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Settings` tab and modify the `Installation Directory` to be where you want the `.dylib` file to output.\
+    \
+    It's recommended that you set the output directory to be in the `appResources` of your BlueBubbles Server source code, for instance:  `/{path_to_your_code}/packages/server/appResources/private-api/macos11`\
 
 
     <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
