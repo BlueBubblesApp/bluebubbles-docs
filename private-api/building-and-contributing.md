@@ -27,7 +27,6 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
 4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Phases` tab and expand the `Copy Files` section. Edit the `Path` to be where you want the dylib to output to.\
     \
     It's recommended that you set the path to be in the `appResources` of your BlueBubbles Server source code, for instance:  `/{path_to_your_code}/packages/server/appResources/private-api/macos11`\
-    \
 
 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 20.24.59@2x.png" alt=""><figcaption></figcaption></figure>
