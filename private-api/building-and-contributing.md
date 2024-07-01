@@ -24,26 +24,20 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
    * **Make sure you do not open the `BlueBubblesHelper.xcodeproj` file**
 3. Select the `BlueBubblesHelper` project header in the primary side bar\
    ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.39.04@2x.png>)
-4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Settings` tab and modify the `Installation Directory` to be where you want the `.dylib` file to output.\
+4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Phases` tab and expand the `Copy Files` section. Edit the `Path` to be where you want the dylib to output to.\
     \
-    It's recommended that you set the output directory to be in the `appResources` of your BlueBubbles Server source code, for instance:  `/{path_to_your_code}/packages/server/appResources/private-api/macos11`\
+    It's recommended that you set the path to be in the `appResources` of your BlueBubbles Server source code, for instance:  `/{path_to_your_code}/packages/server/appResources/private-api/macos11`\
+    \
 
 
-    <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 20.24.59@2x.png" alt=""><figcaption></figcaption></figure>
 5. Select the `BlueBubblesHelper` target (blue block icon) in the secondary sidebar\
    ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.40.51@2x.png>)
 6.  Select the `Signing & Capabilities` tab and sign in (or select) your Developer account\
 
 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.42.34@2x.png" alt=""><figcaption></figcaption></figure>
-7. Switch to the `Build Phases` tab and expand the `Run Script` section
-8.  Modify the `codesign` command to pass in the path to your dylib output\
-    \
-    You can also comment out lines 3-4 since the BlueBubbles Server will manage the process now. Killing Messages will have the BlueBubbles Server restart the process with the updated dylib.\
-
-
-    <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 19.38.14@2x.png" alt=""><figcaption></figcaption></figure>
-9.  Ensure that you have the `BlueBubblesHelper Dylib` selected as the build target\
+7.  Ensure that you have the `BlueBubblesHelper Dylib` selected as the build target\
 
 
     <div align="left">
@@ -51,14 +45,14 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.45.26@2x.png" alt="" width="375"><figcaption></figcaption></figure>
 
     </div>
-10. Open up `Terminal` and navigate (`cd`) into the `bluebubbles-helper` project folder
-11. Navigate into the project folder for the Private API Bundle you are working on
-    * i.e. `Messages/MacOS-11+`
-    * i.e. `Messages/MacOS-10`
-    * ie. `FaceTime/MacOS-11+`
-12. Run `pod install`
+8. Open up `Terminal` and navigate (`cd`) into the `bluebubbles-helper` project folder
+9. Navigate into the project folder for the Private API Bundle you are working on
+   * i.e. `Messages/MacOS-11+`
+   * i.e. `Messages/MacOS-10`
+   * ie. `FaceTime/MacOS-11+`
+10. Run `pod install`
     * This should install the the dependencies for the project
-13. Now, you are ready to build. Just hit the play button, and the dylib will be built, outputting to the proper location within the BlueBubbles Server source code (appResources). The Messages app will be killed, which will prompt the BlueBubbles Server to restart the Messages app with the new dylib build.
+11. Now, you are ready to build. Just hit the play button, and the dylib will be built, outputting to the proper location within the BlueBubbles Server source code (appResources). The Messages app will be killed, which will prompt the BlueBubbles Server to restart the Messages app with the new dylib build.
 
 ## Contributing
 
