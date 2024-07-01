@@ -106,6 +106,16 @@ The Helper Bundle development is filled with some jargon that might appear confu
 4. [dyld\_shared\_cache\_util](https://lapcatsoftware.com/articles/bigsur.html) - open-source tool from Apple that also dumps headers on macOS 11. This has not been tested by any developers as of yet, but may be a good alternative to freedomtan's classdump-dyld fork.
 5. [ZKSwizzle](https://github.com/alexzielenski/ZKSwizzle) - this tool is already built into the bundle. You can use it to "intercept" Objective-C method calls and see what arguments are passed to them.
 
+### Enable Private Logs
+
+Often times, you may try to log some data out to the Console App, however, the log shows as `<private>`. This is because your Mac's `Enable-Private-Data` setting defaults to `false`. In order to turn it on to allow private logging, please install the following MacOS Profile:
+
+{% hint style="info" %}
+Once downloaded, just double-click the profile to install it. However, since the profile no longer has a valid signature, you will need to open your `System Preferences` app, then search `Profiles` and manually install the profile.
+{% endhint %}
+
+{% embed url="https://georgegarside.com/blog/macos/sierra-console-private/" %}
+
 ### Development Process
 
 The following will attempt to outline how our development process runs from start to finish when adding a new feature to the bundle.
