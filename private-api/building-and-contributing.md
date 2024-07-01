@@ -20,23 +20,29 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
 ### Instructions
 
 1. Open the `MacOS-xx` folder (where xx corresponds with your current macOS version) within the cloned repository files
-2. Double click `BlueBubblesHelper.xcworkspace` to open inside Xcode
+   * i.e. `Messages/MacOS-11+`
+   * i.e. `Messages/MacOS-10`
+   * ie. `FaceTime/MacOS-11+`
+2. Open up `Terminal` and navigate to the same directory
+3. Run `pod install`
+   * This should install the the dependencies for the project
+4. Using finder, double click `BlueBubblesHelper.xcworkspace` to open inside Xcode
    * **Make sure you do not open the `BlueBubblesHelper.xcodeproj` file**
-3. Select the `BlueBubblesHelper` project header in the primary side bar\
+5. Select the `BlueBubblesHelper` project header in the primary side bar\
    ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.39.04@2x.png>)
-4.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Phases` tab and expand the `Copy Files` section. Edit the `Path` to be where you want the dylib to output to.\
+6.  Select the `BlueBubblesHelper Dylib` target (building icon) in the secondary sidebar. Then go to the `Build Phases` tab and expand the `Copy Files` section. Edit the `Path` to be where you want the dylib to output to.\
     \
     It's recommended that you set the path to be in the `appResources` of your BlueBubbles Server source code, for instance:  `/{path_to_your_code}/packages/server/appResources/private-api/macos11`\
 
 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 20.24.59@2x.png" alt=""><figcaption></figcaption></figure>
-5. Select the `BlueBubblesHelper` target (blue block icon) in the secondary sidebar\
+7. Select the `BlueBubblesHelper` target (blue block icon) in the secondary sidebar\
    ![](<.gitbook/assets/CleanShot 2024-06-30 at 08.40.51@2x.png>)
-6.  Select the `Signing & Capabilities` tab and sign in (or select) your Developer account\
+8.  Select the `Signing & Capabilities` tab and sign in (or select) your Developer account\
 
 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.42.34@2x.png" alt=""><figcaption></figcaption></figure>
-7.  Ensure that you have the `BlueBubblesHelper Dylib` selected as the build target\
+9.  Ensure that you have the `BlueBubblesHelper Dylib` selected as the build target\
 
 
     <div align="left">
@@ -44,14 +50,25 @@ You do not need to pay the $100 fee for the Apple Developer account. As soon as 
     <figure><img src=".gitbook/assets/CleanShot 2024-06-30 at 08.45.26@2x.png" alt="" width="375"><figcaption></figcaption></figure>
 
     </div>
-8. Open up `Terminal` and navigate (`cd`) into the `bluebubbles-helper` project folder
-9. Navigate into the project folder for the Private API Bundle you are working on
-   * i.e. `Messages/MacOS-11+`
-   * i.e. `Messages/MacOS-10`
-   * ie. `FaceTime/MacOS-11+`
-10. Run `pod install`
-    * This should install the the dependencies for the project
-11. Now, you are ready to build. Just hit the play button, and the dylib will be built, outputting to the proper location within the BlueBubbles Server source code (appResources). The Messages app will be killed, which will prompt the BlueBubbles Server to restart the Messages app with the new dylib build.
+10. Now, you are ready to build. Just hit the play button, and the dylib will be built, outputting to the proper location within the BlueBubbles Server source code (appResources). The Messages app will be killed, which will prompt the BlueBubbles Server to restart the Messages app with the new dylib build.
+
+## Common Issues
+
+> ld: library 'CocoaAsyncSocket' not found\
+> clang: error: linker command failed with exit code 1
+
+This means you've done either of the following:
+
+* You have not run `pod install` within the `MacOS-XX` folder of the cloned repository
+* You opened the `BlueBubblesHelper.xcodeproj` file instead of the `BlueBubblesHelper.xcworkspace` file
+
+> PhaseScriptExecution failed with a nonzero exit code
+
+This error means that the `Build Phase` -> `Run Script` configuration for your target errored out.
+
+This is likely due to the `killall Messages` command failing (throwing an error) because the Messages app is not running.
+
+To fix it, change the script to be `killall -q Messages` which should allow it to return 0 for the exit code. If that doesn't work, try `killall -q Messages; exit 0;`
 
 ## Contributing
 
