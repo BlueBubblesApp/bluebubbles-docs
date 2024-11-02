@@ -72,6 +72,6 @@ Now try opening the bluebubbles app and see if it connects.
 22. Add Header Key "cf-access-client-secret" and set Value to your client secret (remove "CF-Access-Client-Secret:" from the start - ie only insert longalphanumericstring)
 23. Hit OK.
 24. Test syncing your messages by selecting "Manually Sync Messages" for the last hour.
-25. In Cloudflare, from the left hanbd menu, go to Access > Service Auth and refresh the browser.
+25. In Cloudflare, from the left hand menu, go to Access > Service Auth and refresh the browser.
 26. "Last Seen" should be updated to shown the Service Token has been used.
 27. Congrats - your Blue Bubbles server is now secured so only your app can access it.
