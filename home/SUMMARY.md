@@ -15,6 +15,7 @@
 ## 📱 BlueBubbles Clients
 
 * [Overview](https://docs.bluebubbles.app/client)
+* [Usage Guides](https://docs.bluebubbles.app/client/usage-guides/)
 
 ## 🔌 BlueBubbles Private API
 
