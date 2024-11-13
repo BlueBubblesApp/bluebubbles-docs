@@ -13,6 +13,7 @@
 * [Using BlueBubbles with Adguard](usage-guides/using-bluebubbles-with-adguard.md)
 * [Tasker Integration](usage-guides/tasker-integration.md)
 * [Automatic Updates for GitHub Android Releases](usage-guides/automatic-updates-for-github-android-releases.md)
+* [Using Unified Push for Notifications](usage-guides/using-unified-push-for-notifications.md)
 
 ## For Developers <a href="#dev" id="dev"></a>
 

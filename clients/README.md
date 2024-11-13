@@ -76,7 +76,7 @@ Alpha builds can be found in Discord
 
 ## Screenshots
 
-<table><thead><tr><th data-type="files">Chat List</th><th data-type="files">Message View</th><th data-type="files">Private API Features</th></tr></thead><tbody><tr><td><a href=".gitbook/assets/image.png">image.png</a></td><td><a href=".gitbook/assets/image (2).png">image (2).png</a></td><td><a href=".gitbook/assets/image (1).png">image (1).png</a></td></tr></tbody></table>
+<table><thead><tr><th width="204.33333333333331" data-type="files">Chat List</th><th data-type="files">Message View</th><th data-type="files">Private API Features</th></tr></thead><tbody><tr><td><a href=".gitbook/assets/image.png">image.png</a></td><td><a href=".gitbook/assets/image (2).png">image (2).png</a></td><td><a href=".gitbook/assets/image (1).png">image (1).png</a></td></tr></tbody></table>
 
 ## Contributors
 
