@@ -7,13 +7,32 @@ description: >-
 
 ### Contribution Notes
 
-This guide is a contribution by Cooper Marshall.  On Discord as cmarsha11
+This guide is a contribution by Cooper Marshall.  On Discord as cmarsha11.  Thanks to @JustBen for writing the Docker guide and providing a template to build from.
 
 ### Disclaimer
 
-This guide is not for beginners.  If this is the first time you have setup a BlueBubbles server or worked with virtualization is will be difficult.  The intent of this guide is to walkthrough how to setup BlueBubbles server on a macOS VM via [UTM](https://mac.getutm.app/) running on a macOS host.  
+This guide is not for beginners.  If this is the first time you have setup a BlueBubbles server or worked with virtualization this will be difficult.  The intent of this guide is to walkthrough how to setup BlueBubbles server on a macOS VM virtualized with [UTM](https://mac.getutm.app/) running on a macOS host.  
 
-There are several reasons for running Bluebubbles on a mac VM even if you have genuine Apple hardware.  One main reason is security.  You can disable SIP and provide full disk access on the VM and isolate the VM from the rest of your network while restricting permissions on the host machine.  Another reason is portabilty.  It is much easier to transfer the full UTM image to a new server.  A downside with running on UTM is the Find My function is disabled.  There are probably [work arounds](https://docs.bluebubbles.app/server/troubleshooting-guides/fix-facetime-features-for-virtual-machines) but I did not test them.
+There are several reasons for running Bluebubbles on a mac VM even if you have genuine Apple hardware:
+
+- Security (the main reason!)
+  - You can disable SIP on the VM and leave the host fully protected
+  - You can provide full disk access on the VM that is only used for BlueBubbles
+  - You can isolate the VM from the rest of your network without restricting permissions on the host machine
+
+- Portabilty
+  - It is easy to transfer the full UTM image to a new server
+
+- Legal/compliance
+  - Per Apple SLA, you can legally run macOS on a virtual machine IF it is running on Apple branded metal 
+  - See section 2.B.iii in the macOS Sequoia SLA (https://www.apple.com/legal/sla/)
+  - Don't need to worry about iCloud account being deactivated
+
+- Open sourceness
+  - UTM is completely free and open source
+
+  
+A downside with running on UTM is the Find My function is disabled.  There are probably [work arounds](https://docs.bluebubbles.app/server/troubleshooting-guides/fix-facetime-features-for-virtual-machines) but I did not test them.
 
 This guide is provided with no guarantees or warranty. If you encounter any problems, the community may be able to provide help in the Discord but we cannot guarantee that this will work for every configuration.
 
@@ -27,7 +46,7 @@ This guide will walk you through setting up BlueBubbles on a macOS VM running on
 
 You must have all of these already setup/installed in order to continue with the guide.
 
-* A Mac host
+* A Mac host running Apple Silicon
   * Your system must support virtualization
 * Comfortable with macOS terminal
 * Software:
@@ -71,12 +90,12 @@ One method to secure the VM is to run it on an isolated VLAN.  Below are the ste
     ![networkj](img/network.png)
 1. Select `Manager Virtual Interfaces...`
 1. Select the `+` (plus) sign in the bottom left, then `New VLAN`
-1. Name the VLAN and enter the tag of the DMZ VLAN.  For   `Interface` select your network interface
+1. Name the VLAN and enter the tag of your restricted VLAN.  For   `Interface` select your network interface
 1. Power off the VM
 1. On UTM, select the settings icon
     ![UTM settings](img/UTM-settings.png)
 1. Select `Network`
-1. Under `Network Mode` select `Bridged (Advanced)
+1. Under `Network Mode` select `Bridged (Advanced)`
 1. Under `Interface` select the VLAN you created earlier
 1. Turn the VM back on.  If your VLAN has DHCP setup it will pull an IP.  Otherwise assign a static IP in the range
 1. If the VLAN is properly isolated you should no longer be able to reach the host from the VM.  All traffic will be routed out of the VM through the VLAN to the router.
@@ -84,4 +103,4 @@ One method to secure the VM is to run it on an isolated VLAN.  Below are the ste
 1. To enable `Detect Localhost Address`, create a firewall rule
     1. Allow any for source
     1. Only allow your VM IP and port for destination (default port is usually 1234 but can be changed in settings)
-    1. This will allow machines on the network to bypass port forwarding or BYO proxies when on the LAN but still restrict the VM from communicating to other machines on your network
+    1. This will allow machines on the network to bypass port forwarding or BYO proxies when on the LAN but still restrict the VM from communicating with other machines on your network and the host
