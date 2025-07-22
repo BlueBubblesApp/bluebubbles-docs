@@ -9,7 +9,7 @@ In order to get Private API features, you must disable MacOS extra security meas
 {% endhint %}
 
 {% hint style="info" %}
-Disabling SIP can be challenging, we recommend joining our [Discord](https://discord.gg/BdsGwREh) to get assistance with the process if you need it!
+Disabling SIP can be challenging, we recommend joining our [Discord](https://discord.gg/hFgbV8Jank) to get assistance with the process if you need it!
 {% endhint %}
 
 {% hint style="danger" %}
