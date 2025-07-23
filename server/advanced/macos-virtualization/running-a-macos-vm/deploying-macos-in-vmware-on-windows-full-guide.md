@@ -152,7 +152,7 @@ This section will detail how to create the base virtual machine using the recove
 This section will detail how to patch your virtual machine in order to properly run macOS and get iServices setup.
 
 1. Navigate to your virtual machine's files
-   * The virtual machine's files are located here: `C:\Users\<username>\Documents\Virtual Machines\`
+   * The virtual machine's files are located here: `%userprofile%\Documents\Virtual Machines\`
 2. Create a backup of your virtual machine's `.vmx` file
    * You can just copy and paste it into the same directory, appending `.bak` to the filename.
 3. Open your virtual machine's original `Configuration File` (`.vmx`) in a text editor (i.e. Notepad)
