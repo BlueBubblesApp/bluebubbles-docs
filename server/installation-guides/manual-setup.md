@@ -68,7 +68,7 @@ If you need higher bandwidth or experience issues, you can try:
 1. **zrok**: An open-source, high-bandwidth (10GB/day) proxy service. It's built-in to the server and handles large file transfers better than Cloudflare. See our [zrok Setup Guide](/server/advanced/byo-proxy-service-guides/zrok-proxy.md).
 2. **Ngrok**: A reliable alternative, but the free tier is restricted to 1GB of bandwidth per month.
 
-If you stick with Cloudflare and have connection issues, try:
+If you stick with Cloudflare and have connection issues, try these troubleshooting steps:
 
 1. Cycle your wifi connection on the **client** device (not the server Mac)
 2. Restart the server app to get a new URL and repeat step 1 if necessary
