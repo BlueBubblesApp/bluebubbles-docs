@@ -2,11 +2,13 @@
 
 [zrok](https://zrok.io/) is a modern, open-source sharing platform built on [OpenZiti](https://netfoundry.io/docs/openziti/). It's an alternative to Cloudflare or Ngrok for BlueBubbles users who need high bandwidth and stable connections.
 
-## zrok Benefits
+## zrok benefits
 
-- **High bandwidth:** zrok offers 10GB data transfer limit per 24 hours on their free tier.
-- **No domain required:** Unlike some Cloudflare setups, zrok provides a public URL automatically.
-- **Open source:** zrok is fully open-source, aligning with the BlueBubbles philosophy.
+* **High bandwidth**: zrok offers a 5GB data transfer limit per 24 hours on their free tier.
+* **No domain required**: Automatically provides a public URL.
+* **Open source and self-hostable**: zrok is fully [open-source on GitHub](https://github.com/openziti/zrok). You can use the managed service at zrok.io or [host it yourself](https://netfoundry.io/docs/zrok/guides/self-hosting/linux/) for total data sovereignty and unlimited bandwidth.
+* **Zero-trust security**: Unlike traditional proxies, zrok is built on OpenZiti, providing a secure, outbound-only connection without opening firewall ports.
+* **Built-in**: The zrok client is already integrated directly into the BlueBubbles Server.
 
 ## Setup Instructions
 

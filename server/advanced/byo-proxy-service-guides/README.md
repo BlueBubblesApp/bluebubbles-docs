@@ -10,7 +10,7 @@ By default, BlueBubbles has the Ngrok & Cloudflare proxy services built-into the
 
 * [Cloudflare with a Custom Domain](cloudflare-with-a-custom-domain.md)
 * [Caddy & DuckDNS](caddy-and-duckdns.md)
-* [zrok Proxy Service](./zrok-proxy.md)
 * [Tailscale VPN](tailscale-vpn-setup.md)
 * [Nginx Proxy Manager](nginx-proxy-manager.md)
 * [Nginx Manual Setup](nginx-manual-setup.md)
+* [zrok Proxy Service](./zrok-proxy.md)

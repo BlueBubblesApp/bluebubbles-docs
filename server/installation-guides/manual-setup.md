@@ -65,7 +65,7 @@ In most cases, Cloudflare is the proxy service you should use. However, Cloudfla
 
 If you need higher bandwidth or experience issues, you can try:
 
-1. **zrok**: An open-source, high-bandwidth (10GB/day) proxy service. It's built-in to the server and handles large file transfers better than Cloudflare. See our [zrok Setup Guide](/server/advanced/byo-proxy-service-guides/zrok-proxy.md).
+1. **zrok**: An open-source proxy [sponsored by NetFoundry](https://netfoundry.io/) that offers 5GB/day on its free tier. It's built-in to the server and handles large files better than cloudflare. For users who want to avoid all limits, zrok is also [fully self-hostable](https://netfoundry.io/docs/zrok/guides/self-hosting/linux/). See our [zrok Setup Guide](../advanced/byo-proxy-service-guides/zrok-proxy.md).
 2. **Ngrok**: A reliable alternative, but the free tier is restricted to 1GB of bandwidth per month.
 
 If you stick with Cloudflare and have connection issues, try these troubleshooting steps:

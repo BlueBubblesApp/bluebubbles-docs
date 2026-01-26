@@ -56,10 +56,10 @@
 * [BYO Proxy Service Guides](advanced/byo-proxy-service-guides/README.md)
   * [Cloudflare with a Custom Domain](advanced/byo-proxy-service-guides/cloudflare-with-a-custom-domain.md)
   * [Caddy & DuckDNS](advanced/byo-proxy-service-guides/caddy-and-duckdns.md)
-  * [zrok Proxy Service](advanced/byo-proxy-service-guides/zrok-proxy.md)
   * [Nginx Proxy Manager](advanced/byo-proxy-service-guides/nginx-proxy-manager.md)
   * [Nginx Manual Setup](advanced/byo-proxy-service-guides/nginx-manual-setup.md)
   * [Tailscale VPN Setup](advanced/byo-proxy-service-guides/tailscale-vpn-setup.md)
+  * [zrok Proxy Service](advanced/byo-proxy-service-guides/zrok-proxy.md)
 
 ## Developer Guides
 
