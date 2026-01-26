@@ -4,7 +4,7 @@
 
 ## zrok benefits
 
-* **High bandwidth**: zrok offers a 5GB data transfer limit per 24 hours on their free tier.
+* **High bandwidth**: zrok offers a 5GB data transfer limit per 24 hours on their free tier, with pricing options to purchase more bandwidth if needed.
 * **No domain required**: Automatically provides a public URL.
 * **Open source and self-hostable**: zrok is fully [open-source on GitHub](https://github.com/openziti/zrok). You can use the managed service at zrok.io or [host it yourself](https://netfoundry.io/docs/zrok/guides/self-hosting/linux/) for total data sovereignty and unlimited bandwidth.
 * **Zero-trust security**: Unlike traditional proxies, zrok is built on OpenZiti, providing a secure, outbound-only connection without opening firewall ports.
