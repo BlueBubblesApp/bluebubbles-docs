@@ -29,7 +29,7 @@ You can configure Firebase either automatically via **Google Login** or manually
 2. Register an **Android** app using the package name `com.bluebubbles.messaging`.
 3. Download the `google-services.json` file from the **General** tab in your Firebase Project Settings.
 4. Go to the **Service accounts** tab and click **Generate new private key** to download your service account JSON file.
-5. Drag both JSON files into the BlueBubbles setup wizard and click the **floppy disk save icon** for each field.
+5. Drag both JSON files into the BlueBubbles setup wizard.
 6. Click **Next** to proceed to the **Connection** slide.
 
     ![Firebase manual config](../../.gitbook/assets/firebase-manual-config.png)
@@ -53,14 +53,14 @@ If you've already completed the initial setup and configured Firebase, you can s
 4. Click the **floppy disk save icon** next to the token.
 5. Click **Save** at the bottom of the page and **Restart** the server when prompted.
 
-## Connecting your Clients
+## Connect your Clients
 
 1. Find the public URL (e.g., `https://*.share.zrok.io`) at the top of the server home screen once you've finished the setup.
 2. Use this URL or the displayed QR code to link your Android, Windows, or Linux clients to the server.
-3. Log into your [zrok portal](https://myzrok.io) to verify the connection is active; a successful connection will show an active frontend mapping to your server's local port.
+3. Log into your [zrok portal](https://myzrok.io) to verify the connection is active.
 
     ![Successful zrok connection](../../.gitbook/assets/zrok-success.png)
 
-:::tip
+{% hint style="info" %}
 For production-grade environments requiring even more advanced networking, zrok is also available as a managed service called [Frontdoor](https://netfoundry.io/docs/frontdoor/intro).
-:::
+{% endhint %}
