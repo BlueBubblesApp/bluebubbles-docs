@@ -61,7 +61,14 @@ Proceed to the **Connection** step.
 Set a strong server password, and make sure to use the floppy disk icon to save it.
 
 {% hint style="info" %}
-In most cases, Cloudflare is the proxy service you should use. If you experience any issues with it, please try the following:
+In most cases, Cloudflare is the proxy service you should use. However, Cloudflare has a 100MB file size limit, which may prevent sending or receiving large videos.
+
+If you need higher bandwidth or experience issues, you can try:
+
+1. **zrok**: An open-source proxy [sponsored by NetFoundry](https://netfoundry.io/) that offers 5GB/day on its free tier. It's built-in to the server and handles large files better than Cloudflare. For users who want to avoid all limits, zrok is also [fully self-hostable](https://netfoundry.io/docs/zrok/guides/self-hosting/linux/). See our [zrok Setup Guide](../advanced/byo-proxy-service-guides/zrok-proxy.md).
+2. **Ngrok**: A reliable alternative, but the free tier is restricted to 1GB of bandwidth per month.
+
+If you stick with Cloudflare and have connection issues, try these troubleshooting steps:
 
 1. Cycle your wifi connection on the **client** device (not the server Mac)
 2. Restart the server app to get a new URL and repeat step 1 if necessary

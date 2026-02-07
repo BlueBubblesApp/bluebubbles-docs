@@ -59,6 +59,7 @@
   * [Nginx Proxy Manager](advanced/byo-proxy-service-guides/nginx-proxy-manager.md)
   * [Nginx Manual Setup](advanced/byo-proxy-service-guides/nginx-manual-setup.md)
   * [Tailscale VPN Setup](advanced/byo-proxy-service-guides/tailscale-vpn-setup.md)
+  * [zrok Proxy Service](advanced/byo-proxy-service-guides/zrok-proxy.md)
 
 ## Developer Guides
 
