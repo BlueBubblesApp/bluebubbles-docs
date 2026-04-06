@@ -84,11 +84,13 @@ Please follow the instructions for your macOS version in the tabs below.
         * Select `Terminal`
         * Type this command and hit enter to disable SIP: `csrutil disable`
      3. Click the Apple logo in the top menu bar, then click `Restart`
+     4. For more details, see the [Additional Resources](#additional-resources) section below for official Apple documentation on SIP.
    * _**Physical Mac, APPLE SILICON, official software**_
      1. Do the following to force your Mac to reboot into recovery mode:
         * Shut down the Mac normally
         * Press and hold the power button on your Mac until you see "Loading startup options."
         * Click Options, then click Continue, and enter the admin password if requested.
+         * **Important:** On later versions of macOS on Apple Silicon, you must hold the **Left Shift** key when you click **Continue** and also keep holding it after typing in your user password and pressing Enter. Only then will you be able to disable SIP; otherwise, it may not let you. For more details, see the [Additional Resources](#additional-resources) section below for official Apple documentation on SIP.
      2. When you are booted into `Recovery Mode`:
         * Click on `Utilities` in the top menu bar
         * Select `Terminal`
@@ -109,5 +111,12 @@ Here are some basic troubleshooting steps. Please try these out, and if you need
 * Make sure you have the Private API switch turned on in _**both**_ the server and the client app
 * Try force quitting and reopening the server (with private API switch toggled on)
 * Run `csrutil status` inside Terminal, then join our Discord and let us know what the output is.
+
+## Additional Resources
+
+For more information about System Integrity Protection (SIP), see the following official resources:
+
+- [Apple Support: About System Integrity Protection on Mac](https://support.apple.com/en-us/102518)
+- [Apple Developer Documentation: Disabling and Enabling System Integrity Protection](https://developer.apple.com/documentation/security/disabling-and-enabling-system-integrity-protection)
 
 If none of this works, you should join our Discord and the developers will be able to help you out. In your post, please include your macOS version, Mac chipset (Intel / Apple Silicon), and your server version. Thanks!
