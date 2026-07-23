@@ -62,10 +62,11 @@ docker run \
   -e WIDTH=1920 \
   -e HEIGHT=1080 \
   -e GENERATE_UNIQUE=true \
-  sickcodes/docker-osx:ventura
+  -e SHORTNAME=ventura \
+  sickcodes/docker-osx:latest
 ```
 
-This will take a while because it's downloading the image for Docker-OSX and generating a unique serial number and bootdisk for your mac VM.
+The `latest` Docker-OSX image supports multiple macOS versions, so `SHORTNAME=ventura` selects the version tested by this guide. This will take a while because it's downloading the image for Docker-OSX and generating a unique serial number and bootdisk for your mac VM.
 
 You may see a handful of errors particularly related to ALSA. These can be safely ignored.
 
