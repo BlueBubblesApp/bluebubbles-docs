@@ -39,7 +39,25 @@ The name of the project does not have to be **BlueBubblesApp** if you already ha
 3. Next, **Create database** and press **Next > Enable.** You can change the database location if you are not based in North America so it is closer to you.
 4. If Cloud Firestore glitches and does not show you the database page, simply refresh the page.
 5. In the tabs near the top, click **Rules**
-6. Set the rule's condition from `allow read, write: if false;` to `allow read, write: if true;` (Change false to true) and click **Publish**.
+6. Replace the rules with the following configuration and click **Publish**:
+
+```text
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /server/config {
+      allow read;
+    }
+
+    match /server/commands {
+      allow write;
+    }
+  }
+}
+```
+
+This permits public reads only from the `server/config` document and public writes only to the `server/commands` document. Requests to unmatched paths are denied by default. The BlueBubbles server uses the Admin SDK with the service account generated below, so its database access bypasses these client security rules. The two listed operations remain public for BlueBubbles clients; this configuration limits their scope but does not add user authentication.
+
 7. Click the gear cog in the top left and click **Project Settings**.
 8. In the tabs near the top, navigate to **Service Accounts**. Generate a new private key and save this locally. **This will download file 1 / 2 needed for the manual setup.**
 9. Next, navigate to the **General** tab.
