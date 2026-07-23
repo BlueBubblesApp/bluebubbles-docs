@@ -127,4 +127,3 @@ Deleting an ID that does not exist returns `404`.
 * `400 Bad Request`: Check that `url` starts with `http` and every item in `events` is a supported string event key.
 * `401 Unauthorized`: Check that an authentication query parameter is present and matches the server password.
 * `404 Not Found`: The webhook ID in a delete request does not exist.
-
