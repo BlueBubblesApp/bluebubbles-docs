@@ -125,6 +125,8 @@ Some events use a primitive value instead of an object. For example, `new-server
 
 ### Event keys
 
+The server's [`webhookEventOptions` constant](https://github.com/BlueBubblesApp/bluebubbles-server/blob/development/packages/server/src/server/api/http/constants.ts#L5) is the source of truth for available subscription keys. Compare this table with that constant whenever either list changes.
+
 | Event | Subscription key |
 | --- | --- |
 | All events | `*` |
