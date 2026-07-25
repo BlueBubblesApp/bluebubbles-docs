@@ -12,15 +12,21 @@ All examples below use these shell variables:
 export BLUEBUBBLES_URL="https://your-server.example.com"
 read -s BLUEBUBBLES_PASSWORD
 export BLUEBUBBLES_PASSWORD
+BLUEBUBBLES_PASSWORD_QUERY="$(
+  printf '%s' "$BLUEBUBBLES_PASSWORD" |
+    od -An -tx1 |
+    tr -d ' \n' |
+    sed 's/../%&/g'
+)"
 ```
 
-Enter the BlueBubbles server password when prompted by `read`.
+Enter the BlueBubbles server password when prompted by `read`. The final command percent-encodes every password byte for safe use in a query string using utilities included with macOS.
 
 {% hint style="warning" %}
 Webhook management requests authenticate through a query parameter. Use HTTPS, avoid placing the password directly in scripts or shell history, and take care not to copy authenticated request URLs into logs.
 {% endhint %}
 
-The examples use `password`, but the `guid` and `token` query parameter aliases also work. Every endpoint is under `/api/v1/webhook`.
+The examples use `password`, but the `guid` and `token` query parameter aliases also work. Every endpoint is under `/api/v1/webhook`. The pre-encoded query value avoids curl's newer `--url-query` option, so these commands also work with older curl versions bundled with supported macOS releases.
 
 ## List webhooks
 
@@ -28,8 +34,7 @@ Use `GET /api/v1/webhook` to retrieve all configured webhooks:
 
 ```bash
 curl --silent --show-error \
-  --url-query "password=$BLUEBUBBLES_PASSWORD" \
-  "$BLUEBUBBLES_URL/api/v1/webhook"
+  "$BLUEBUBBLES_URL/api/v1/webhook?password=$BLUEBUBBLES_PASSWORD_QUERY"
 ```
 
 A successful response contains an array of webhook records:
@@ -56,9 +61,7 @@ To retrieve one webhook, include its numeric `id`:
 
 ```bash
 curl --silent --show-error \
-  --url-query "password=$BLUEBUBBLES_PASSWORD" \
-  --url-query "id=1" \
-  "$BLUEBUBBLES_URL/api/v1/webhook"
+  "$BLUEBUBBLES_URL/api/v1/webhook?password=$BLUEBUBBLES_PASSWORD_QUERY&id=1"
 ```
 
 ## Create a webhook
@@ -71,13 +74,12 @@ Use `POST /api/v1/webhook` with a JSON body containing:
 ```bash
 curl --silent --show-error \
   --request POST \
-  --url-query "password=$BLUEBUBBLES_PASSWORD" \
   --header "Content-Type: application/json" \
   --data '{
     "url": "https://automation.example.com/bluebubbles",
     "events": ["new-message", "updated-message"]
   }' \
-  "$BLUEBUBBLES_URL/api/v1/webhook"
+  "$BLUEBUBBLES_URL/api/v1/webhook?password=$BLUEBUBBLES_PASSWORD_QUERY"
 ```
 
 The response includes the webhook's generated `id`:
@@ -107,8 +109,7 @@ Use `DELETE /api/v1/webhook/:id`, replacing `:id` with the numeric webhook ID:
 ```bash
 curl --silent --show-error \
   --request DELETE \
-  --url-query "password=$BLUEBUBBLES_PASSWORD" \
-  "$BLUEBUBBLES_URL/api/v1/webhook/1"
+  "$BLUEBUBBLES_URL/api/v1/webhook/1?password=$BLUEBUBBLES_PASSWORD_QUERY"
 ```
 
 A successful deletion returns:
