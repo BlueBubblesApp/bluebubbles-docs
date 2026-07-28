@@ -66,7 +66,7 @@ docker run \
   sickcodes/docker-osx:latest
 ```
 
-The mutable `latest` tag is intentional: Docker-OSX's [current Ventura example](https://github.com/sickcodes/Docker-OSX/blob/master/README.md#L103-L115) uses this image with `SHORTNAME=ventura`. If this command stops working, compare it with that upstream example. This guidance was last verified on July 27, 2026. The first run takes a while because it downloads the Docker-OSX image and generates a unique serial number and boot disk for your Mac VM.
+The mutable `latest` tag is intentional: Docker-OSX's [current Ventura example](https://github.com/sickcodes/Docker-OSX#ventura-13-) uses this image with `SHORTNAME=ventura`. If this command stops working, compare it with that upstream example. This guidance was last verified on July 27, 2026. The first run takes a while because it downloads the Docker-OSX image and generates a unique serial number and boot disk for your Mac VM.
 
 You may see a handful of errors particularly related to ALSA. These can be safely ignored.
 
