@@ -56,6 +56,8 @@ service cloud.firestore {
 }
 ```
 
+The server's [`FCMService.setFirestoreRulesForApp`](https://github.com/BlueBubblesApp/bluebubbles-server/blob/development/packages/server/src/server/services/fcmService/index.ts#L154-L172) implementation is the source of truth for this policy. Compare this block with that implementation whenever either changes.
+
 This permits public reads only from the `server/config` document and public writes only to the `server/commands` document. Requests to unmatched paths are denied by default. The BlueBubbles server uses the Admin SDK with the service account generated below, so its database access bypasses these client security rules. The two listed operations remain public for BlueBubbles clients; this configuration limits their scope but does not add user authentication.
 
 7. Click the gear cog in the top left and click **Project Settings**.
