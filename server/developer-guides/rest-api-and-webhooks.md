@@ -66,19 +66,96 @@ Or in the case of an error:
 
 ## Webhooks
 
-We support listening to the following events:
+When a subscribed event occurs, the server sends an HTTP `POST` request to the webhook URL with a `Content-Type` of `application/json`.
 
-1. New Messages
-2. Message Updates (delivered, read, etc)
-3. Message Errors
-4. Group Name Changes
-5. Participant Added / Removed / Left
-6. Chat Read Status Changes
-7. Typing Indicators
-8. BB Server Update
-9. BB Server URL Change
-10. Hello World (for testing)
+Every webhook uses the same outer envelope:
 
-You can also subscribe to an event that listens to all of the above at once.
+```json
+{
+  "type": "event-name",
+  "data": {}
+}
+```
 
-Simply provide a URL and the server will POST to it whenever your desired event occurs.
+* `type` is one of the event keys listed below.
+* `data` is the event-specific payload. It can be an object, string, or `null`, so receivers should branch on `type` before decoding it.
+
+### Payload examples
+
+A `new-message` event contains a serialized message. The exact fields can vary with the server version, macOS version, message type, and configured payload-size limits, but commonly include:
+
+```json
+{
+  "type": "new-message",
+  "data": {
+    "guid": "00000000-0000-0000-0000-000000000000",
+    "text": "Hello!",
+    "dateCreated": 1720000000000,
+    "isFromMe": false,
+    "attachments": [],
+    "chats": [
+      {
+        "guid": "iMessage;-;<address>"
+      }
+    ]
+  }
+}
+```
+
+A typing indicator has a smaller object payload:
+
+```json
+{
+  "type": "typing-indicator",
+  "data": {
+    "display": true,
+    "guid": "iMessage;-;<address>"
+  }
+}
+```
+
+Some events use a primitive value instead of an object. For example, `new-server` sends the updated server URL:
+
+```json
+{
+  "type": "new-server",
+  "data": "https://example.com"
+}
+```
+
+### Event keys
+
+The server's [`webhookEventOptions` constant](https://github.com/BlueBubblesApp/bluebubbles-server/blob/development/packages/server/src/server/api/http/constants.ts#L5) is the source of truth for available subscription keys. Compare this table with that constant whenever either list changes.
+
+| Event | Subscription key |
+| --- | --- |
+| All events | `*` |
+| New messages | `new-message` |
+| Message updates | `updated-message` |
+| Message send errors | `message-send-error` |
+| Group name changes | `group-name-change` |
+| Group icon changes | `group-icon-changed` |
+| Group icon removal | `group-icon-removed` |
+| Participant removed | `participant-removed` |
+| Participant added | `participant-added` |
+| Participant left | `participant-left` |
+| Chat read status changes | `chat-read-status-changed` |
+| Typing indicators | `typing-indicator` |
+| Scheduled message errors | `scheduled-message-error` |
+| Server updates | `server-update` |
+| New server URL | `new-server` |
+| Find My location updates | `new-findmy-location` |
+| WebSocket hello world | `hello-world` |
+| Incoming FaceTime call | `incoming-facetime` |
+| FaceTime call status changes (experimental) | `ft-call-status-changed` |
+| iMessage alias removed | `imessage-alias-removed` |
+| Theme backup created | `theme-backup-created` |
+| Theme backup updated | `theme-backup-updated` |
+| Theme backup deleted | `theme-backup-deleted` |
+| Settings backup created | `settings-backup-created` |
+| Settings backup updated | `settings-backup-updated` |
+| Settings backup deleted | `settings-backup-deleted` |
+
+Subscribe to `*` to receive every supported event. Otherwise, select only the event keys your receiver handles.
+
+Webhook delivery is best effort. The server does not retry a failed request, so the receiver should respond with a successful status promptly and queue longer-running work for later processing.
