@@ -63,10 +63,10 @@ docker run \
   -e HEIGHT=1080 \
   -e GENERATE_UNIQUE=true \
   -e SHORTNAME=ventura \
-  sickcodes/docker-osx:latest
+  sickcodes/docker-osx@sha256:3a3c82c79bc4e73531f819ccdfa4053b3084efd7c1f645678dbf8b4b3a24369c
 ```
 
-The mutable `latest` tag is intentional: Docker-OSX's [current Ventura example](https://github.com/sickcodes/Docker-OSX#ventura-13-) uses this image with `SHORTNAME=ventura`. If this command stops working, compare it with that upstream example. This guidance was last verified on July 27, 2026. The first run takes a while because it downloads the Docker-OSX image and generates a unique serial number and boot disk for your Mac VM.
+This digest pins the Linux AMD64 image resolved from `sickcodes/docker-osx:latest` on November 13, 2026. Docker-OSX's [Ventura example](https://github.com/sickcodes/Docker-OSX#ventura-13-) uses that image with `SHORTNAME=ventura`. The registry digest and upstream command were checked on that date; the pinned image has not been boot-tested under KVM for this guide. If you update the digest, compare it with the upstream example and verify that it reaches the Ventura installer on a KVM-capable host. The first run takes a while because it downloads the Docker-OSX image and generates a unique serial number and boot disk for your Mac VM.
 
 You may see a handful of errors particularly related to ALSA. These can be safely ignored.
 
