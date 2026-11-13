@@ -68,7 +68,7 @@ Or in the case of an error:
 
 When a subscribed event occurs, the server sends an HTTP `POST` request to the webhook URL with a `Content-Type` of `application/json`.
 
-Every webhook uses the same outer envelope:
+Webhook requests use this outer envelope:
 
 ```json
 {
@@ -77,8 +77,8 @@ Every webhook uses the same outer envelope:
 }
 ```
 
-* `type` is one of the event keys listed below.
-* `data` is the event-specific payload. It can be an object, string, or `null`, so receivers should branch on `type` before decoding it.
+* `type` identifies the event. The table below lists the keys available for individual subscriptions; wildcard subscriptions can also receive other events emitted by the server.
+* `data` is the event-specific payload. It can be an object, array, string, or `null`, and may be omitted for events without a payload. Receivers should branch on `type` before decoding it and tolerate missing `data`.
 
 ### Payload examples
 
@@ -156,6 +156,8 @@ The server's [`webhookEventOptions` constant](https://github.com/BlueBubblesApp/
 | Settings backup updated | `settings-backup-updated` |
 | Settings backup deleted | `settings-backup-deleted` |
 
-Subscribe to `*` to receive every supported event. Otherwise, select only the event keys your receiver handles.
+Subscribe to `*` to receive every event dispatched by the server, including events that are not available as individual subscription keys. For example, scheduled-message creation, update, deletion, and sent events are delivered to wildcard subscribers; `scheduled-message-deleted` has an array payload, and `scheduled-message-updated` can omit `data`. Wildcard receivers should tolerate unknown event types. Otherwise, select only the event keys your receiver handles.
+
+The current server [emits alias removals](https://github.com/BlueBubblesApp/bluebubbles-server/blob/development/packages/server/src/server/events.ts) as `imessage-aliases-removed`, which differs from the selectable `imessage-alias-removed` key. To receive those events, subscribe to `*` and handle the emitted plural form.
 
 Webhook delivery is best effort. The server does not retry a failed request, so the receiver should respond with a successful status promptly and queue longer-running work for later processing.
