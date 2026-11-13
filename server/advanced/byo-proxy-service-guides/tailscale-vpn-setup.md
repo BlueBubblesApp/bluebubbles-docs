@@ -7,7 +7,7 @@ Tailscale is a mesh VPN software that uses WireGuard technology. It also include
 --- 
 Requirements
 - [Tailscale account](https://login.tailscale.com/start)
-- Tailscale v1.38.3 or later
+- Tailscale v1.52 or later
 - [MagicDNS](https://login.tailscale.com/admin/dns) enabled for your tailnet
 ---
 1. Download Tailscale from the [Mac App Store](https://apps.apple.com/ca/app/tailscale/id1475387142) or [directly from Tailscale](https://pkgs.tailscale.com/stable/#macos) 
