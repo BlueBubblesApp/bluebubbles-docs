@@ -10,11 +10,11 @@ All examples below use these shell variables:
 
 ```bash
 export BLUEBUBBLES_URL="https://your-server.example.com"
-read -s BLUEBUBBLES_PASSWORD
+IFS= read -r -s BLUEBUBBLES_PASSWORD
 export BLUEBUBBLES_PASSWORD
 BLUEBUBBLES_PASSWORD_QUERY="$(
   printf '%s' "$BLUEBUBBLES_PASSWORD" |
-    od -An -tx1 |
+    od -An -v -tx1 |
     tr -d ' \n' |
     sed 's/../%&/g'
 )"
@@ -68,7 +68,7 @@ curl --silent --show-error \
 
 Use `POST /api/v1/webhook` with a JSON body containing:
 
-* `url`: The HTTP or HTTPS endpoint that will receive webhook requests. HTTPS is strongly recommended.
+* `url`: An absolute HTTP or HTTPS URL that will receive webhook requests. HTTPS is strongly recommended.
 * `events`: An array of webhook event keys. See [REST API & Webhooks](rest-api-and-webhooks.md#webhooks) for the supported events. Use `*` to subscribe to every event.
 
 ```bash
@@ -102,6 +102,8 @@ The response includes the webhook's generated `id`:
 
 Webhook URLs are unique. Posting a URL that is already registered returns the existing webhook without changing its event subscriptions. To replace its subscriptions through the REST API, delete the existing webhook and then create it again.
 
+On server versions with webhook security options, API-created webhooks block private network destinations by default and do not follow redirects. To register a local receiver, first enable **Allow API webhooks to reach local network addresses** in the server's API settings, then include `"blockPrivateAddresses": false` in the JSON body. The optional boolean fields `requireHttps` and `followRedirects` default to `false`. Existing URLs retain their stored settings when registered again.
+
 ## Delete a webhook
 
 Use `DELETE /api/v1/webhook/:id`, replacing `:id` with the numeric webhook ID:
@@ -125,6 +127,6 @@ Deleting an ID that does not exist returns `404`.
 
 ## Troubleshooting
 
-* `400 Bad Request`: Check that `url` starts with `http` and every item in `events` is a supported string event key.
+* `400 Bad Request`: Check that `url` is an absolute HTTP or HTTPS URL, the destination satisfies the server's webhook security settings, and every item in `events` is a supported string event key.
 * `401 Unauthorized`: Check that an authentication query parameter is present and matches the server password.
 * `404 Not Found`: The webhook ID in a delete request does not exist.
