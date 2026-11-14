@@ -16,7 +16,7 @@ This guide is not for beginners. However, these steps should make it relatively 
 
 This guide is provided with no guarantees or warranty. If you encounter any problems, the community may be able to provide help in the Discord (linked in the header of this page), but we cannot guarantee that this will work for every configuration.
 
-This guide has only been tested with MacOS Ventura, though it should work with only minor modifications for older versions.
+This guide targets macOS Ventura. The pinned bootstrap image below has not been boot-tested for this update.
 
 ### Goal
 
@@ -62,10 +62,11 @@ docker run \
   -e WIDTH=1920 \
   -e HEIGHT=1080 \
   -e GENERATE_UNIQUE=true \
-  sickcodes/docker-osx:ventura
+  -e SHORTNAME=ventura \
+  sickcodes/docker-osx@sha256:3a3c82c79bc4e73531f819ccdfa4053b3084efd7c1f645678dbf8b4b3a24369c
 ```
 
-This will take a while because it's downloading the image for Docker-OSX and generating a unique serial number and bootdisk for your mac VM.
+This digest pins the Linux AMD64 image resolved from `sickcodes/docker-osx:latest` on November 13, 2026. Docker-OSX's [Ventura example](https://github.com/sickcodes/Docker-OSX#ventura-13-) uses that image with `SHORTNAME=ventura`. The registry digest and upstream command were checked on that date; the pinned image has not been boot-tested under KVM for this guide. If you update the digest, compare it with the upstream example and verify that it reaches the Ventura installer on a KVM-capable host. The first run takes a while because it downloads the Docker-OSX image and generates a unique serial number and boot disk for your Mac VM.
 
 You may see a handful of errors particularly related to ALSA. These can be safely ignored.
 
@@ -94,7 +95,7 @@ This copies the generated bootdisk and serial number information out of the cont
 
 10\.  Shutdown your VM then take down the container.
 
-The container and image will automatically be removed from your system (to keep things clean) because of the `--rm` and `--rmi` options we passed above.
+The `--rm` option removes the stopped container. Docker keeps the downloaded image; if you used Podman with the optional `--rmi` flag, Podman also removes the image unless another container is using it.
 
 ```bash
 docker stop bluebubbles-setup
