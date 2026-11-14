@@ -16,7 +16,7 @@ This guide is not for beginners. However, these steps should make it relatively 
 
 This guide is provided with no guarantees or warranty. If you encounter any problems, the community may be able to provide help in the Discord (linked in the header of this page), but we cannot guarantee that this will work for every configuration.
 
-This guide has only been tested with MacOS Ventura, though it should work with only minor modifications for older versions.
+This guide targets macOS Ventura. The pinned bootstrap image below has not been boot-tested for this update.
 
 ### Goal
 
@@ -95,7 +95,7 @@ This copies the generated bootdisk and serial number information out of the cont
 
 10\.  Shutdown your VM then take down the container.
 
-The container and image will automatically be removed from your system (to keep things clean) because of the `--rm` and `--rmi` options we passed above.
+The `--rm` option removes the stopped container. Docker keeps the downloaded image; if you used Podman with the optional `--rmi` flag, Podman also removes the image unless another container is using it.
 
 ```bash
 docker stop bluebubbles-setup
