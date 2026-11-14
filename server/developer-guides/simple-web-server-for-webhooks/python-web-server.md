@@ -73,7 +73,7 @@ class PostHandler(BaseHTTPRequestHandler):
             data = json.loads(post_data)
             self.handle_json(data)
         except ValueError as ex:
-            return self.return_bad_request(ex.message or "Invalid JSON received")
+            return self.return_bad_request(str(ex) or "Invalid JSON received")
 
         self.return_ok()
 
@@ -89,7 +89,7 @@ class PostHandler(BaseHTTPRequestHandler):
         print("Received JSON data: ", data)
 
         if data.get('type') == 'new-message':
-            self.handle_new_message()
+            self.handle_new_message(data)
         else:
             print("Unhandled event type: ", data.get('type'))
 

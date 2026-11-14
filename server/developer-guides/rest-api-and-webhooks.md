@@ -40,13 +40,13 @@ For example: `https://some-url.ngrok.io/api/v1/ping?guid=password`
 
 ## Response Format
 
-All requests are returned with the basic format as below:
+JSON API responses use the following envelope. The `data` field is included only when the endpoint returns a value:
 
 ```
 {
     status: (int) Status Code,
     message: (String) Status Message,
-    data: (Variable)
+    data?: (any)
 }
 ```
 
@@ -58,7 +58,7 @@ Or in the case of an error:
     message: (String) Status Message,
     error: {
         type: (String) Error Type,
-        error: (String) Error Message
+        message: (String) Error Message
     },
     data?: (any)
 }
